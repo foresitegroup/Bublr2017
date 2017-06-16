@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Louies2017';
+  src:  url('fonts/Louies2017.eot?ywus48');
+  src:  url('fonts/Louies2017.eot?ywus48#iefix') format('embedded-opentype'),
+    url('fonts/Louies2017.ttf?ywus48') format('truetype'),
+    url('fonts/Louies2017.woff?ywus48') format('woff'),
+    url('fonts/Louies2017.svg?ywus48#Louies2017') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fg {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Louies2017' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fg-facebook:before {
+  content: "\e901";
+}
+.fg-twitter:before {
+  content: "\e902";
+}
+.fg-instagram:before {
+  content: "\e903";
+}
+.fg-youtube:before {
+  content: "\e904";
+}
+.fg-linkedin:before {
+  content: "\e905";
+}
+.fg-pinterest:before {
+  content: "\e906";
+}
+.fg-google-plus:before {
+  content: "\e907";
+}
+.fg-hamburger-menu:before {
+  content: "\e911";
+}
+.fg-close:before {
+  content: "\e912";
+}
+.fg-play-button:before {
+  content: "\e921";
+}
+.fg-arrow-left:before {
+  content: "\e922";
+}
+.fg-arrow-right:before {
+  content: "\e923";
+}
+.fg-arrow-up:before {
+  content: "\e924";
+}
+.fg-arrow-down:before {
+  content: "\e925";
+}
+.fg-file:before {
+  content: "\e926";
+}
+.fg-checkbox:before {
+  content: "\e927";
+}
+.fg-checkbox-filled:before {
+  content: "\e928";
+}
+.fg-waves:before {
+  content: "\e971";
+}
+.fg-calendar:before {
+  content: "\e972";
+}
+.fg-trophy:before {
+  content: "\e973";
+}
+.fg-stopwatch:before {
+  content: "\e974";
+}
+.fg-boat:before {
+  content: "\e975";
+}
+.fg-anchor:before {
+  content: "\e976";
+}
+.fg-clock:before {
+  content: "\e977";
+}
+.fg-maggie-bersch-cup:before {
+  content: "\e981";
+}
+.fg-louies-last-cup:before {
+  content: "\e982";
+}
+.fg-flounder:before {
+  content: "\e983";
+}
+.fg-debbia:before {
+  content: "\e984";
+}
+.fg-cutlass:before {
+  content: "\e985";
+}
+.fg-ugliest-spinnaker:before {
+  content: "\e986";
+}
+.fg-louies-flag:before {
+  content: "\e987";
+}
+.fg-trophy-burst:before {
+  content: "\e988";
+}
+
