@@ -56,9 +56,11 @@
 
     <div class="site-width">
       <div class="social">
-        <a href="#" class="twitter"></a>
-        <a href="#" class="facebook"></a>
-        <a href="#" class="instagram"></a>
+        <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter"></a>'; ?>
+        <?php if (get_theme_mod('bublr_facebook') != "") echo '<a href="' . get_theme_mod('bublr_facebook') . '" class="facebook"></a>'; ?>
+        <?php if (get_theme_mod('bublr_instagram') != "") echo '<a href="' . get_theme_mod('bublr_instagram') . '" class="instagram"></a>'; ?>
+        <?php if (get_theme_mod('bublr_youtube') != "") echo '<a href="' . get_theme_mod('bublr_youtube') . '" class="youtube"></a>'; ?>
+        <?php if (get_theme_mod('bublr_linkedin') != "") echo '<a href="' . get_theme_mod('bublr_linkedin') . '" class="linkedin"></a>'; ?>
       </div>
     </div>
   </div>
@@ -76,3 +78,19 @@
   </div>
 </div>
 
+<?php
+// have_posts();
+// the_post();
+// $images = get_children( array(
+//     'orderby'        => 'rand',
+//     'post_type'      => 'attachment',
+//     'post_mime_type' => 'image',
+//     'post_parent'    => get_the_ID(),
+// );
+// if ($images) {
+//             foreach ( $images as $attachment_id => $attachment ) {
+//                     echo wp_get_attachment_image( $attachment_id, 'full' );
+//                 }
+//             }
+//             wp_reset_query();
+?>

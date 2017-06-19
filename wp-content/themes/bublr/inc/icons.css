@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Louies2017';
-  src:  url('fonts/Louies2017.eot?ywus48');
-  src:  url('fonts/Louies2017.eot?ywus48#iefix') format('embedded-opentype'),
-    url('fonts/Louies2017.ttf?ywus48') format('truetype'),
-    url('fonts/Louies2017.woff?ywus48') format('woff'),
-    url('fonts/Louies2017.svg?ywus48#Louies2017') format('svg');
+  font-family: 'Bublr';
+  src:  url('fonts/Bublr.eot?4r3wv0');
+  src:  url('fonts/Bublr.eot?4r3wv0#iefix') format('embedded-opentype'),
+    url('fonts/Bublr.ttf?4r3wv0') format('truetype'),
+    url('fonts/Bublr.woff?4r3wv0') format('woff'),
+    url('fonts/Bublr.svg?4r3wv0#Bublr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 .fg {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'Louies2017' !important;
+  font-family: 'Bublr' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -39,85 +39,165 @@
 .fg-linkedin:before {
   content: "\e905";
 }
-.fg-pinterest:before {
-  content: "\e906";
-}
-.fg-google-plus:before {
-  content: "\e907";
-}
 .fg-hamburger-menu:before {
   content: "\e911";
 }
 .fg-close:before {
   content: "\e912";
 }
-.fg-play-button:before {
-  content: "\e921";
+.fg-play:before {
+  content: "\e900";
+  color: #2d388e;
 }
-.fg-arrow-left:before {
-  content: "\e922";
+.fg-logo .path1:before {
+  content: "\e801";
+  color: rgb(19, 181, 234);
 }
-.fg-arrow-right:before {
-  content: "\e923";
+.fg-logo .path2:before {
+  content: "\e802";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-arrow-up:before {
-  content: "\e924";
+.fg-logo .path3:before {
+  content: "\e803";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-arrow-down:before {
-  content: "\e925";
+.fg-logo .path4:before {
+  content: "\e804";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-file:before {
-  content: "\e926";
+.fg-logo .path5:before {
+  content: "\e805";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-checkbox:before {
-  content: "\e927";
+.fg-logo .path6:before {
+  content: "\e806";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-checkbox-filled:before {
-  content: "\e928";
+.fg-logo .path7:before {
+  content: "\e807";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-waves:before {
-  content: "\e971";
+.fg-logo .path8:before {
+  content: "\e808";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-calendar:before {
-  content: "\e972";
+.fg-logo .path9:before {
+  content: "\e809";
+  margin-left: -1.3330078125em;
+  color: rgb(19, 181, 234);
 }
-.fg-trophy:before {
-  content: "\e973";
+.fg-logo .path10:before {
+  content: "\e80a";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-stopwatch:before {
-  content: "\e974";
+.fg-logo .path11:before {
+  content: "\e80b";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-boat:before {
-  content: "\e975";
+.fg-logo .path12:before {
+  content: "\e80c";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-anchor:before {
-  content: "\e976";
+.fg-logo .path13:before {
+  content: "\e80d";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-clock:before {
-  content: "\e977";
+.fg-logo .path14:before {
+  content: "\e80e";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-maggie-bersch-cup:before {
-  content: "\e981";
+.fg-logo .path15:before {
+  content: "\e80f";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-louies-last-cup:before {
-  content: "\e982";
+.fg-logo .path16:before {
+  content: "\e810";
+  margin-left: -1.3330078125em;
+  color: rgb(255, 255, 255);
 }
-.fg-flounder:before {
-  content: "\e983";
+.fg-bublr-b .path1:before {
+  content: "\e811";
+  color: rgb(255, 255, 255);
 }
-.fg-debbia:before {
-  content: "\e984";
+.fg-bublr-b .path2:before {
+  content: "\e812";
+  margin-left: -1em;
+  color: rgb(19, 181, 234);
 }
-.fg-cutlass:before {
-  content: "\e985";
+.fg-biker:before {
+  content: "\e820";
+  color: #4dbdec;
 }
-.fg-ugliest-spinnaker:before {
-  content: "\e986";
+.fg-pay:before {
+  content: "\e821";
+  color: #2d388e;
 }
-.fg-louies-flag:before {
-  content: "\e987";
+.fg-ride:before {
+  content: "\e822";
+  color: #2d388e;
 }
-.fg-trophy-burst:before {
-  content: "\e988";
+.fg-return:before {
+  content: "\e823";
+  color: #2d388e;
 }
-
+.fg-repeat:before {
+  content: "\e824";
+  color: #2d388e;
+}
+.fg-b-cycle .path1:before {
+  content: "\e825";
+  color: rgb(255, 255, 255);
+}
+.fg-b-cycle .path2:before {
+  content: "\e826";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path3:before {
+  content: "\e827";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path4:before {
+  content: "\e828";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path5:before {
+  content: "\e829";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path6:before {
+  content: "\e82a";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path7:before {
+  content: "\e82b";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path8:before {
+  content: "\e82c";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
+.fg-b-cycle .path9:before {
+  content: "\e82d";
+  margin-left: -0.8330078125em;
+  color: rgb(45, 53, 144);
+}
