@@ -65,7 +65,7 @@ Version: 1.0
 BODY {
   margin: 0;
   padding: 0;
-  background: #FFFFFF;
+  background: #2D3590;
   color: #717375;
   font-weight: 400;
   font-family: 'Nexa', sans-serif;
@@ -89,7 +89,7 @@ INPUT[type="text"],
 INPUT[type="email"] {
   outline: 0;
   border: 0;
-  border-radius: 20px/50%;
+  border-radius: 1.5em;
   box-sizing: border-box;
   width: 100%;
   padding: 0.6em 1em 0.5em;
@@ -157,7 +157,7 @@ A:hover, A:active {
 .button:link, .button:visited {
   display: inline-block;
   border: 5px solid #002C3F;
-  border-radius: 20px/50%;
+  border-radius: 1.5em;
   padding: 0.8em 1em 0.6em;
   color: #002C3F;
   line-height: 1em;
@@ -222,6 +222,7 @@ A:hover, A:active {
   top: 0;
   left: 0;
   width: 100%;
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.15);
 }
 
 #show-menu-top,
@@ -521,14 +522,275 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 }
 
 #home-banner {
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
 #home-banner:before {
   content: "";
-  padding-bottom: 48%;
+  padding-bottom: 48.5%;
   display: inline-block;
+}
+
+#home-banner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+#home-banner .site-width {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 1.25em;
+  letter-spacing: 0.075em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#home-banner .site-width .single-post-gallery { display: none; }
+
+#home-banner .button:link, #home-banner .button:visited {
+  margin: 0 1em;
+  border-radius: 1.7em;
+  padding: 1.1em 1.6em 0.8em 1.9em;
+  font-size: 19px;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+#home-banner .button.filled:link, #home-banner .button.filled:visited {
+  border-color: #13B5EA;
+  background: #13B5EA;
+  color: #FFFFFF;
+}
+
+#home-banner .button:hover, #home-banner .button:active,
+#home-banner .button:before, #home-banner .button:after {
+  background: #13B5EA;
+}
+
+#home-banner .button.filled:hover, #home-banner .button.filled:active,
+#home-banner .button.filled:before, #home-banner .button.filled:after {
+  background: #2D3590;
+}
+
+#home-pricing {
+  background: url(images/pricing-background.png) center bottom no-repeat;
+  background-size: 100% auto;
+  position: relative;
+}
+
+#home-pricing:before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 70%;
+  background: #FFFFFF;
+}
+
+#home-pricing .background-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #FAFAFA;
+  font-weight: 800;
+  font-size: 160px;
+  line-height: 0.95em;
+}
+
+#home-pricing .background-text.bottom {
+  top: auto;
+  left: auto;
+  right: 75px;
+  bottom: 160px;
+  z-index: -1;
+}
+
+#home-pricing .site-width {
+  position: relative;
+  z-index: 3;
+  padding: 5em 0;
+}
+
+.pricing-grid {
+  display: inline-block;
+  vertical-align: top;
+  width: 28%;
+  margin: 0 7.5% 70px 0;
+  box-sizing: border-box;
+  padding: 35px;
+}
+
+.pricing-grid.last { margin-right: 0; }
+
+.pricing-grid P { margin: 0; }
+
+.pricing-grid A:link,
+.pricing-grid A:visited {
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: underline;
+}
+
+.pricing-grid A:hover,
+.pricing-grid A:active {
+  color: #13B5EA;
+}
+
+.pricing-grid A:after {
+  font-family: 'Bublr';
+  content: "\e914";
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
+.pricing-grid.start {
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 1em;
+}
+
+.pricing-grid.start A:link,
+.pricing-grid.start A:visited {
+  margin-top: 30px;
+  line-height: 14px;
+  display: block;
+}
+
+.pricing-grid.box {
+  border-radius: 18px;
+  background: #13B5EA;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.15);
+}
+
+.pricing-grid.box H2 {
+  margin: 0 0 2em;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+}
+
+.pricing-grid.box H3 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 115px;
+  line-height: 1em;
+  letter-spacing: 0;
+}
+
+.pricing-grid.box H3:before {
+  content: "$";
+  font-size: 55%;
+  position: relative;
+  top: -0.6em;
+  font-weight: 700;
+}
+
+.pricing-grid.box A {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 3em;
+}
+
+.pricing-grid.box A:hover,
+.pricing-grid.box A:active {
+  color: #FFFFFF;
+}
+
+.pricing-grid.box .button:after { content: ""; }
+
+.pricing-grid.box .button:link,
+.pricing-grid.box .button:visited {
+  border-color: #2D3590;
+  background: #2D3590;
+  color: #FFFFFF;
+  margin: 3em 1em 0 0;
+}
+
+.pricing-grid.box.single .button:link,
+.pricing-grid.box.single .button:visited {
+  margin-right: 0;
+}
+
+.pricing-grid.box .button:hover,
+.pricing-grid.box .button:active {
+  border-color: #FFFFFF;
+  background: #FFFFFF;
+  color: #2D3590;
+  transition: all 0.2s;
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.25);
+}
+
+.pricing-grid.box .button:before,
+.pricing-grid.box .button:after {
+  transform: none;
+  transition: none;
+}
+
+.pricing-grid.app {
+  color: #A9AAAB;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.5em;
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-bottom: 0;
+}
+
+.pricing-grid.app H2 {
+  margin: 0 0 0.3em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1em;
+  letter-spacing: 0.06em;
+}
+
+.pricing-grid.app IMG {
+  max-width: 55%;
+  height: auto;
+  margin-top: 2em;
+}
+
+#home-pricing .app-links {
+  text-align: center;
+  padding-bottom: 3.5em;
+}
+
+#home-pricing .app-links IMG {
+  height: 45px;
+  width: auto;
+  margin: 0 2em;
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
 }
 
 #burning {
@@ -710,6 +972,8 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 
 @media only screen and (max-width: 1206px) {
   .site-width { width: 96%; }
+
+  #home-pricing:before { display: block; }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -718,6 +982,8 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 
 @media only screen and (max-width: 1050px) {
   #header .site-width > .main-menu UL LI { padding: 0 1em; }
+
+  #home-pricing .background-text { font-size: 15.2vw; }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -727,7 +993,10 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   #header .site-width .button { display: none; }
 
   .mobile { display: block; }
-
+  
+  #home-banner:before { padding-bottom: 60%; }
+  #home-banner .site-width { font-size: 70px; }
+  
   #burning > DIV { width: 92%; }
 
   #burning .fg-biker {
@@ -746,6 +1015,11 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 @media only screen and (max-width: 800px) {
   .mm-menu.mm-offcanvas { width: 45%; }
   html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-45%,0,0); }
+  
+  #home-banner:before { padding-bottom: 55%; }
+  #home-banner .site-width { font-size: 55px; }
+  #home-banner .site-width P { margin: 0.75em 0; }
+  #home-banner .button:link, #home-banner .button:visited { font-size: 16px; }
 
   #burning:before { padding-bottom: 50%; }
 
@@ -755,17 +1029,22 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 }
 
 @media only screen and (max-width: 725px) {
+  #home-banner .site-width { font-size: 6.8vw; }
+  #home-banner .button:link, #home-banner .button:visited { font-size: 2.2vw; }
+
+  #carbon { font-size: 70px; }
+
   .footer-third.copyright,
   .footer-third.location,
   .footer-third.apps { width: 32%; }
-
-  #carbon { font-size: 70px; }
 }
 
 @media only screen and (max-width: 600px) {
   .mm-menu.mm-offcanvas { width: 50%; }
   html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-50%,0,0); }
-  
+
+  #home-banner .button:link, #home-banner .button:visited { font-size: 2.65vw; }
+
   #burning:before { padding-bottom: 60%; }
   #burning > DIV { font-size: 3.4vw; }
   #carbon { font-size: 11.5vw; }
