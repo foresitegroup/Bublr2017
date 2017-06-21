@@ -1,4 +1,9 @@
 <?php
+// We want Featured Images on Pages and Posts
+add_theme_support( 'post-thumbnails' );
+
+
+// Define menus
 function register_my_menus() {
   register_nav_menus(
     array(

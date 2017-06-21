@@ -51,6 +51,15 @@ while ( have_posts() ) : the_post();
       </div>
     </div>
   </div>
+  
+  <?php $map = get_posts(array('name' => 'home-page-map', 'post_type' => 'page')); ?>
+  <div id="home-map" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($map[0]->ID)); ?>);">
+    <div class="site-width">
+      <div id="map-left">
+        <?php echo do_shortcode('[insert page="'.$map[0]->ID.'" display="content"]'); ?>
+      </div>
+    </div>
+  </div>
 
   <?php
 endwhile;
