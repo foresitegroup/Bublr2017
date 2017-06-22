@@ -154,6 +154,13 @@ A:hover, A:active {
   text-decoration: none;
 }
 
+A.arrow:after {
+  font-family: 'Bublr';
+  content: "\e914";
+  display: inline-block;
+  margin-left: 0.25em;
+}
+
 .button:link, .button:visited {
   display: inline-block;
   border: 5px solid #002C3F;
@@ -799,7 +806,8 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 #home-map {
   transform: translateY(-140px);
   margin-bottom: -140px;
-  background: url(images/home-map.jpg) right center no-repeat;
+  background-position: right center;
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
@@ -819,7 +827,7 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 #home-map #map-left .button:visited {
   margin-top: 3em;
   padding: 1em 2em 0.7em 2.3em;
-  font-size: 18px;
+  font-size: 20%;
   line-height: 1em;
   letter-spacing: 0.3em;
   border-color: #13B5EA;
@@ -840,6 +848,176 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 #home-map #map-left .button:after {
   transform: none;
   transition: none;
+}
+
+#how {
+  background: #13B5EA;
+  color: #FFFFFF;
+  padding: 7em 0 5.5em;
+  text-align: center;
+  font-weight: 900;
+}
+
+#how P { margin: 0; display: inline-block; }
+
+#how .one-fourth {
+  display: inline-block;
+  vertical-align: top;
+  width: 19.5%;
+  font-size: 33px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+  margin: 0 6.9% 3.5em 0;
+  counter-increment: numbers;
+}
+
+#how .one-fourth:nth-of-type(4) { margin-right: 0%; }
+
+#how .one-fourth .icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 1.7em;
+}
+
+#how .one-fourth .icon:after {
+  content: "";
+  display: block;
+  padding-top: 66%;
+}
+
+#how .one-fourth P {
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+#how .one-fourth P:after {
+  content: counter(numbers) ".";
+  position: absolute;
+  left: -0.44em;
+  bottom: -0.36em;
+  z-index: -1;
+  font-size: 303%;
+  line-height: 1em;
+  color: #1CABDB;
+}
+
+#how A.video:link,
+#how A.video:visited {
+  color: #002C3F;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.4em;
+  display: inline-block;
+}
+
+#how A.video:hover,
+#how A.video:active {
+  color: #FFFFFF;
+}
+
+#how A.video:after {
+  font-family: 'Bublr';
+  content: "\e913";
+  display: inline-block;
+  margin-left: 0.25em;
+  font-size: 130%;
+  position: relative;
+  top: 0.2em;
+}
+
+#explore {
+  background: #FFFFFF;
+  position: relative;
+}
+
+#explore .main {
+  outline: 1px solid red;
+  display: inline-block;
+  width: 61%;
+}
+
+#explore .main .header {
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 85px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+}
+
+#explore .sidebar {
+  outline: 1px solid green;
+  width: 39%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#explore .sidebar .all {
+  text-align: right;
+  box-sizing: border-box;
+  padding: 3em 10% 3em 0;
+  line-height: 1em;
+}
+
+#explore .sidebar .all A.arrow:link,
+#explore .sidebar .all A.arrow:visited {
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+  text-decoration: underline;
+}
+
+#explore .sidebar .all A.arrow:hover,
+#explore .sidebar .all A.arrow:active {
+  color: #13B5EA;
+}
+
+#weather {
+  background: #2D3590;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#weather .icon {
+  display: inline-block;
+  position: relative;
+  height: 42px;
+  width: 42px;
+  margin-right: 1em;
+}
+
+#weather .icon CANVAS {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ height: 100%;
+}
+
+#weather H3 {
+  margin: 0;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+}
+
+#weather H4 {
+  margin: 0 0 0.5em;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
 }
 
 #burning {
@@ -1017,6 +1195,8 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   #header .site-width > .main-menu UL LI { padding: 0 2em; }
   #header .site-width .button:link,
   #header .site-width .button:visited { right: 5%; }
+
+  #home-map #map-left { font-size: 6.5vw; }
 }
 
 @media only screen and (max-width: 1206px) {
@@ -1030,6 +1210,8 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   .pricing-grid.start { font-size: 7.5vw; }
 
   .pricing-grid.app H2 { font-size: 3.5vw; }
+
+  #how .one-fourth { font-size: 2.3vw; }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1058,6 +1240,10 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   #home-banner .site-width { font-size: 70px; }
 
   .pricing-grid { width: 32%; margin: 0 1.5% 0.25em 0; }
+
+  #home-map #map-left { font-size: 6vw; }
+  #home-map #map-left .button:link,
+  #home-map #map-left .button:visited { font-size: 24%; }
   
   #burning > DIV { width: 92%; }
 
@@ -1086,6 +1272,10 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   .pricing-grid.box { font-size: 16px; }
 
   .pricing-grid.app H2 { font-size: 42px; }
+
+  #home-map #map-left { font-size: 5.5vw; }
+
+  #how .one-fourth { margin-right: 6.8%; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1103,6 +1293,10 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 
   .pricing-grid.app H2 { font-size: 5.4vw; }
 
+  #how .one-fourth { width: 40%; font-size: 5vw; margin: 0 12% 2.5em 0; }
+  #how .one-fourth:nth-of-type(2) { margin-right: 0%; }
+  #how .one-fourth .icon { width: 85%; margin: 0 auto 1.7em; }
+
   #burning:before { padding-bottom: 50%; }
 
   .footer-third.text { margin-right: 10%; }
@@ -1116,6 +1310,25 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 
   .pricing-grid.monthly,
   .pricing-grid { width: 48.1%; margin: 0 3% 15px 0; }
+
+  #home-map {
+    transform: translateY(-50px);
+    margin-bottom: 20%;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+  }
+
+  #home-map #map-left {
+    position: absolute;
+    top: calc(400px + 10%);
+    width: 96%;
+    padding: 0;
+    font-size: 6.9vw;
+  }
+
+  #home-map #map-left .button:link,
+  #home-map #map-left .button:visited { font-size: 30%; margin-top: 1.2em; }
 
   #carbon { font-size: 70px; }
 
@@ -1167,6 +1380,9 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 @media only screen and (max-width: 480px) {
   .mm-menu.mm-offcanvas { width: 80%; }
   html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-80%,0,0); }
+
+  #how .one-fourth { width: 100%; font-size: 9.5vw; margin-right: 0%; }
+  #how .one-fourth .icon { width: 75%; }
 
   .footer-third.copyright,
   .footer-third.location,
