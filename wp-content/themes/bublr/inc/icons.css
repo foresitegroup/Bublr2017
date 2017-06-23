@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Bublr';
-  src:  url('fonts/Bublr.eot?lid7uy');
-  src:  url('fonts/Bublr.eot?lid7uy#iefix') format('embedded-opentype'),
-    url('fonts/Bublr.ttf?lid7uy') format('truetype'),
-    url('fonts/Bublr.woff?lid7uy') format('woff'),
-    url('fonts/Bublr.svg?lid7uy#Bublr') format('svg');
+  src:  url('fonts/Bublr.eot?oqzdz6');
+  src:  url('fonts/Bublr.eot?oqzdz6#iefix') format('embedded-opentype'),
+    url('fonts/Bublr.ttf?oqzdz6') format('truetype'),
+    url('fonts/Bublr.woff?oqzdz6') format('woff'),
+    url('fonts/Bublr.svg?oqzdz6#Bublr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -52,23 +52,10 @@
   content: "\e913";
   color: #2d388e;
 }
+.fg-clock:before {
+  content: "\e915";
+}
 .fg-biker:before {
   content: "\e820";
   color: #4dbdec;
-}
-.fg-pay:before {
-  content: "\e821";
-  color: #2d388e;
-}
-.fg-ride:before {
-  content: "\e822";
-  color: #2d388e;
-}
-.fg-return:before {
-  content: "\e823";
-  color: #2d388e;
-}
-.fg-repeat:before {
-  content: "\e824";
-  color: #2d388e;
 }

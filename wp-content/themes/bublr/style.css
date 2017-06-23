@@ -62,6 +62,32 @@ Version: 1.0
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/ProximaNovaExtrabold.eot');
+  src: url('fonts/ProximaNovaExtrabold.eot') format('embedded-opentype'),
+       url('fonts/ProximaNovaExtrabold.woff2') format('woff2'),
+       url('fonts/ProximaNovaExtrabold.woff') format('woff'),
+       url('fonts/ProximaNovaExtrabold.ttf') format('truetype'),
+       url('fonts/ProximaNovaExtrabold.svg#MarkSimonsonProximaNovaExtrabold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('fonts/ProximaNovaBlack.eot');
+  src: url('fonts/ProximaNovaBlack.eot') format('embedded-opentype'),
+       url('fonts/ProximaNovaBlack.woff2') format('woff2'),
+       url('fonts/ProximaNovaBlack.woff') format('woff'),
+       url('fonts/ProximaNovaBlack.ttf') format('truetype'),
+       url('fonts/ProximaNovaBlack.svg#MarkSimonsonProximaNovaBlack') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 BODY {
   margin: 0;
   padding: 0;
@@ -618,9 +644,10 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   top: 0;
   left: 0;
   color: #FAFAFA;
+  font-family: 'Proxima Nova', sans-serif;
   font-weight: 800;
   font-size: 160px;
-  line-height: 0.95em;
+  line-height: 0.8em;
 }
 
 #home-pricing .background-text.bottom {
@@ -935,9 +962,27 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 }
 
 #explore .main {
-  outline: 1px solid red;
   display: inline-block;
   width: 61%;
+  position: relative;
+  z-index: 1;
+}
+
+#explore .main .content-width {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#explore .main .background-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #FAFAFA;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 800;
+  font-size: 160px;
+  line-height: 0.75em;
 }
 
 #explore .main .header {
@@ -946,21 +991,93 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   font-size: 85px;
   line-height: 1em;
   letter-spacing: 0.2em;
+  padding: 0.5em 0;
+  text-indent: -0.5em;
+  transform: translate(0.5em);
+}
+
+#latest-post {
+  padding: 4em 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #F8F8F8;
+  font-size: 18px;
+  line-height: 1.8em;
+  position: relative;
+  z-index: 1;
+}
+
+#latest-post:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+#latest-post .date {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 2.5em;
+}
+
+#latest-post .date .fg { font-size: 105%; position: relative; top: 1px; }
+
+#latest-post H3 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#latest-post .button:link,
+#latest-post .button:visited {
+  margin-top: 5em;
+  padding: 1em 1em 0.7em 1.3em;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+  border-color: #13B5EA;
+  background: #13B5EA;
+  color: #FFFFFF;
+  transition: all 0.2s;
+}
+
+#latest-post .button:hover,
+#latest-post .button:active {
+  border-color: #FFFFFF;
+  background: #FFFFFF;
+  color: #13B5EA;
+}
+
+#latest-post .button:before,
+#latest-post .button:after {
+  transform: none;
+  transition: none;
 }
 
 #explore .sidebar {
-  outline: 1px solid green;
   width: 39%;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 10;
 }
 
 #explore .sidebar .all {
   text-align: right;
   box-sizing: border-box;
-  padding: 3em 10% 3em 0;
+  padding: 3.5em 10% 3.5em 0;
   line-height: 1em;
 }
 
@@ -979,12 +1096,27 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   color: #13B5EA;
 }
 
+#explore .sidebar .sidebar-shadow {
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+}
+
 #weather {
   background: #2D3590;
   color: #FFFFFF;
   text-align: center;
   font-weight: 400;
   font-size: 14px;
+  padding: 3em 0 2em;
+}
+
+#weather H5 {
+  margin: 0 0 2em;
+  color: #13B5EA;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 1em;
+  letter-spacing: 1em;
 }
 
 #weather .icon {
@@ -992,7 +1124,7 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
   position: relative;
   height: 42px;
   width: 42px;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 #weather .icon CANVAS {
@@ -1013,12 +1145,66 @@ html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-33%,0,0
 }
 
 #weather H4 {
-  margin: 0 0 0.5em;
+  margin: 0 0 1em;
   font-weight: 900;
-  font-size: 55px;
+  font-size: 28px;
   line-height: 1em;
   letter-spacing: 0.1em;
 }
+
+#weather A {
+  color: #131356;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1em;
+}
+
+#home-quote {
+  background: #13B5EA;
+  color: #FFFFFF;
+}
+
+#home-quote .image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 25px 25px -25px rgba(0,0,0,0.35);
+}
+
+#home-quote .image:before {
+  content: "";
+  display: block;
+  padding-top: 56.4%;
+}
+
+#home-quote .text {
+  padding: calc(7% + 2em) 7% 8%;
+  font-weight: 900;
+  font-size: 37px;
+  line-height: 1.3em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#home-quote .text:before {
+  content: "\201C";
+  color: #002C3F;
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: 800;
+  font-size: 268%;
+  position: absolute;
+  top: 60px;
+  left: 7%;
+}
+
+#home-quote .text .attribution {
+  margin-top: 2em;
+  font-size: 41%;
+  line-height: 1em;
+}
+
+#home-quote .text P { margin: 0; }
 
 #burning {
   background: url(images/burning.jpg) center center no-repeat;
