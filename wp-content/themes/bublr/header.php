@@ -28,6 +28,8 @@
 
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/jquery.waypoints.min.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/jquery.mmenu.all.js"></script>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/inc/swipebox/swipebox.css">
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/swipebox/jquery.swipebox.min.js"></script>
 
   <script type="text/javascript">
     jQuery(document).ready(function() {
@@ -41,6 +43,9 @@
         "navbar": { "add": false },
         "offCanvas": { "position": "right" }
       });
+
+      jQuery(".video").swipebox({autoplayVideos: true});
+      jQuery(".sb, .single-post-gallery A").swipebox();
     });
   </script>
 </head>
@@ -77,20 +82,3 @@
     </div>
   </div>
 </div>
-
-<?php
-// have_posts();
-// the_post();
-// $images = get_children( array(
-//     'orderby'        => 'rand',
-//     'post_type'      => 'attachment',
-//     'post_mime_type' => 'image',
-//     'post_parent'    => get_the_ID(),
-// );
-// if ($images) {
-//             foreach ( $images as $attachment_id => $attachment ) {
-//                     echo wp_get_attachment_image( $attachment_id, 'full' );
-//                 }
-//             }
-//             wp_reset_query();
-?>

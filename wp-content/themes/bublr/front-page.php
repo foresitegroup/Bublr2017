@@ -61,14 +61,6 @@ while ( have_posts() ) : the_post();
     </div>
   </div>
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/inc/swipebox/swipebox.css">
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/swipebox/jquery.swipebox.min.js"></script>
-  <script type="text/javascript">
-    jQuery(document).ready(function() {
-      jQuery(".video").swipebox({autoplayVideos: true});
-    });
-  </script>
-
   <div id="how">
     <div class="site-width">
       <?php echo do_shortcode('[insert page="how-it-works" display="content"]'); ?>
@@ -80,7 +72,8 @@ while ( have_posts() ) : the_post();
       <div class="background-text">COMMUNITY DRIVEN</div>
 
       <div class="header content-width">
-        EXPLORE BY BUBLR
+        EXPLORE<br>BY BUBLR
+        <a href="explore" class="arrow">EXPLORE ALL</a>
       </div>
       
       <?php
@@ -96,14 +89,15 @@ while ( have_posts() ) : the_post();
               <?php
               foreach (get_the_category() as $category) $cat_names[] = $category->name;
               echo implode(', ', $cat_names);
+              unset($cat_names);
               ?>
             </div>
 
-            <?php the_title('<h3>', '</h3>'); ?><br>
+            <?php the_title('<h3>', '</h3>'); ?>
 
             <?php
-            $split = preg_split('/(\.|\!|\?)/', get_the_content(), 3, PREG_SPLIT_DELIM_CAPTURE);
-            echo strip_tags(implode('', array_slice($split, 0, 4)));
+            $split = preg_split('/(\.|\!|\?)/', strip_tags(get_the_content()), 3, PREG_SPLIT_DELIM_CAPTURE);
+            echo implode('', array_slice($split, 0, 4));
             ?><br>
 
             <a href="<?php the_permalink(); ?>" class="button">READ STORY</a>
@@ -114,9 +108,73 @@ while ( have_posts() ) : the_post();
       wp_reset_postdata();
       ?>
 
-      MAIN SECTION
+      <?php
+      $two_posts = get_posts(array('posts_per_page' => 2, 'offset' => 1 ));
+      foreach ($two_posts as $post) : setup_postdata($post);
+      ?>
+        <div class="two-posts">
+          <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>);"></div>
 
-      <div style="width: 10px; height: 1000px; outline: 1px solid red;"></div>
+          <div class="date">
+            <i class="fg fg-clock"></i>
+            <?php the_date(); ?>
+            &bull;
+            <?php
+            foreach (get_the_category() as $category) $cat_names[] = $category->name;
+            echo implode(', ', $cat_names);
+            unset($cat_names);
+            ?>
+          </div>
+
+          <?php the_title('<h3>', '</h3>'); ?>
+
+          <?php
+          $split = preg_split('/(\.|\!|\?)/', strip_tags(get_the_content()), 3, PREG_SPLIT_DELIM_CAPTURE);
+            echo implode('', array_slice($split, 0, 4));
+          ?><br>
+
+          <a href="<?php the_permalink(); ?>" class="button">READ STORY</a>
+        </div>
+      <?php
+      endforeach; 
+      wp_reset_postdata();
+      ?>
+
+      <div style="clear: both;"></div>
+
+      <?php
+      $fourth_post = get_posts(array('posts_per_page' => 1, 'offset' => 3 ));
+      foreach ($fourth_post as $post) : setup_postdata($post);
+        $fourth_post_date = get_the_date();
+
+        foreach (get_the_category() as $category) $cat_names[] = $category->name;
+        $fourth_post_cat = implode(', ', $cat_names);
+        unset($cat_names);
+
+        $fourth_post_title = get_the_title();
+
+        $split = preg_split('/(\.|\!|\?)/', strip_tags(get_the_content()), 3, PREG_SPLIT_DELIM_CAPTURE);
+        $fourth_post_excerpt = implode('', array_slice($split, 0, 4));
+
+        $fourth_post_link = get_the_permalink();
+      endforeach; 
+      wp_reset_postdata();
+      ?>
+
+      <div class="fourth-post">
+        <div class="date">
+          <i class="fg fg-clock"></i>
+          <?php echo $fourth_post_date; ?>
+          &bull;
+          <?php echo $fourth_post_cat; ?>
+        </div>
+
+        <h3><?php echo $fourth_post_title; ?></h3>
+
+        <?php echo $fourth_post_excerpt; ?><br>
+
+        <a href="<?php echo $fourth_post_link; ?>" class="button">READ STORY</a>
+      </div>
     </div>
 
     <div class="sidebar">
@@ -166,6 +224,21 @@ while ( have_posts() ) : the_post();
           <div class="text">
             <?php echo do_shortcode('[insert page="'.$quote[0]->ID.'" display="content"]'); ?>
           </div>
+        </div>
+
+        <div class="fourth-post">
+          <div class="date">
+            <i class="fg fg-clock"></i>
+            <?php echo $fourth_post_date; ?>
+            &bull;
+            <?php echo $fourth_post_cat; ?>
+          </div>
+
+          <h3><?php echo $fourth_post_title; ?></h3>
+
+          <?php echo $fourth_post_excerpt; ?><br>
+
+          <a href="<?php echo $fourth_post_link; ?>" class="button">READ STORY</a>
         </div>
 
       </div> <!-- END .sidebar-shadow -->
