@@ -1,27 +1,3 @@
-<div id="burning">
-  <div>
-    <i class="fg fg-biker"></i>
-    
-    <div id="carbon-trigger">
-      BURNING CALORIES, NOT CARBON.<br>
-      OFFSET TO DATE <?php echo get_theme_mod('bublr_carbon_year'); ?>:
-    </div>
-
-    <div id="carbon"><noscript><?php echo number_format(get_theme_mod('bublr_carbon_pounds')); ?> LBS</noscript></div>
-  </div>
-</div>
-
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/countUp.min.js"></script>
-<script type="text/javascript">
-  jQuery(document).ready(function() {
-    jQuery("#carbon-trigger").waypoint(function() {
-      Carbon.start();
-    },{offset: 'bottom-in-view'});
-  });
-
-  var Carbon = new CountUp("carbon", 0, <?php echo get_theme_mod('bublr_carbon_pounds'); ?>, 0, 2, { suffix: ' LBS' });
-</script>
-
 <div id="footer">
   <div class="site-width">
     <img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png" alt="" id="footer-logo">
@@ -72,6 +48,12 @@
 </div> <!-- /#my-page For mobile menu -->
 <nav id="mobile-menu">
   <ul>
+    <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+
+    <li><a href="https://bublrbikes.bcycle.com/login">Account Login</a></li>
+
+    <?wp_nav_menu( array( 'theme_location' => 'top-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+
     <li class="social">
       <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter"></a>'; ?>
       <?php if (get_theme_mod('bublr_facebook') != "") echo '<a href="' . get_theme_mod('bublr_facebook') . '" class="facebook"></a>'; ?>
@@ -79,12 +61,6 @@
       <?php if (get_theme_mod('bublr_youtube') != "") echo '<a href="' . get_theme_mod('bublr_youtube') . '" class="youtube"></a>'; ?>
       <?php if (get_theme_mod('bublr_linkedin') != "") echo '<a href="' . get_theme_mod('bublr_linkedin') . '" class="linkedin"></a>'; ?>
     </li>
-
-    <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
-
-    <li><a href="https://bublrbikes.bcycle.com/login">Account Login</a></li>
-
-    <?wp_nav_menu( array( 'theme_location' => 'top-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
   </ul>
 </nav>
 

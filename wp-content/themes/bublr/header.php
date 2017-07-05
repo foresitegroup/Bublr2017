@@ -41,7 +41,8 @@
 
       jQuery("#mobile-menu").mmenu({
         "navbar": { "add": false },
-        "offCanvas": { "position": "right" }
+        "offCanvas": { "position": "right" },
+        "extensions": ["pagedim-black"]
       });
 
       jQuery(".video").swipebox({autoplayVideos: true});

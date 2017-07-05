@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Bublr';
-  src:  url('fonts/Bublr.eot?oqzdz6');
-  src:  url('fonts/Bublr.eot?oqzdz6#iefix') format('embedded-opentype'),
-    url('fonts/Bublr.ttf?oqzdz6') format('truetype'),
-    url('fonts/Bublr.woff?oqzdz6') format('woff'),
-    url('fonts/Bublr.svg?oqzdz6#Bublr') format('svg');
+  src:  url('fonts/Bublr.eot?pgfse');
+  src:  url('fonts/Bublr.eot?pgfse#iefix') format('embedded-opentype'),
+    url('fonts/Bublr.ttf?pgfse') format('truetype'),
+    url('fonts/Bublr.woff?pgfse') format('woff'),
+    url('fonts/Bublr.svg?pgfse#Bublr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,9 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fg-arrow:before {
-  content: "\e914";
-}
 .fg-facebook:before {
   content: "\e901";
 }
@@ -54,6 +51,9 @@
 }
 .fg-clock:before {
   content: "\e915";
+}
+.fg-play-right:before {
+  content: "\e916";
 }
 .fg-biker:before {
   content: "\e820";

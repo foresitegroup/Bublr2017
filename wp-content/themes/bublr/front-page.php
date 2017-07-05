@@ -244,7 +244,31 @@ while ( have_posts() ) : the_post();
       </div> <!-- END .sidebar-shadow -->
     </div> <!-- END .sidebar -->
   </div>
+  
+  <div id="burning">
+    <div>
+      <i class="fg fg-biker"></i>
+      
+      <div id="carbon-trigger">
+        BURNING CALORIES, NOT CARBON.<br>
+        OFFSET TO DATE <?php echo get_theme_mod('bublr_carbon_year'); ?>:
+      </div>
 
+      <div id="carbon"><noscript><?php echo number_format(get_theme_mod('bublr_carbon_pounds')); ?> LBS</noscript></div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/countUp.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery("#carbon-trigger").waypoint(function() {
+        Carbon.start();
+      },{offset: 'bottom-in-view'});
+    });
+
+    var Carbon = new CountUp("carbon", 0, <?php echo get_theme_mod('bublr_carbon_pounds'); ?>, 0, 2, { suffix: ' LBS' });
+  </script>
+  
   <?php
 endwhile;
 
