@@ -92,6 +92,13 @@ function bublr_sanitize_num($input) {
 }
 
 
+// All users get text editor by default
+add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
+
+// Don't show admin toolbar on front end
+add_filter('show_admin_bar', '__return_false');
+
+
 /* 
  * Change WordPress default gallery output
  * http://wpsites.org/?p=10510/

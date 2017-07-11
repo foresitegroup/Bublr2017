@@ -37,6 +37,65 @@ while ( have_posts() ) : the_post();
     </div>
   </div>
 
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery('.modal-open').click(function(e){
+        if (jQuery(window).width() > 700) {
+          e.preventDefault();
+
+          jQuery('.modal').removeClass('show');
+
+          var href = jQuery(this).attr('href');
+          var parts = href.split("/");
+          var slug = parts[parts.length-1] !== '' ? parts[parts.length-1] : parts[parts.length-2];
+          jQuery('#'+slug).addClass('show');
+        }
+      });
+
+      jQuery('.modal-close').click(function(e){
+        e.preventDefault();
+        var href = jQuery(this).attr('href');
+        jQuery(href).removeClass('show');
+      });
+    });
+  </script>
+
+  <div class="modal" id="annual-pass">
+    <div class="modal-menu">
+      <div class="site-width">
+        <a href="#annual-pass" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
+
+        <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+      </div>
+    </div>
+
+    <?php echo do_shortcode('[insert page="annual-pass" display="content"]'); ?>
+  </div>
+
+  <div class="modal" id="monthly-pass">
+    <div class="modal-menu">
+      <div class="site-width">
+        <a href="#monthly-pass" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
+
+        <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+      </div>
+    </div>
+
+    <?php echo do_shortcode('[insert page="monthly-pass" display="content"]'); ?>
+  </div>
+
+  <div class="modal" id="pay-as-you-go">
+    <div class="modal-menu">
+      <div class="site-width">
+        <a href="#pay-as-you-go" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
+
+        <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+      </div>
+    </div>
+
+    <?php echo do_shortcode('[insert page="pay-as-you-go" display="content"]'); ?>
+  </div>
+
   <div id="home-pricing">
     <div class="background-text">MILWAUKEE<br>BIKE<br>SHARE</div>
 
@@ -51,7 +110,7 @@ while ( have_posts() ) : the_post();
       </div>
     </div>
   </div>
-  
+
   <?php $map = get_posts(array('name' => 'home-page-map', 'post_type' => 'page')); ?>
   <div id="home-map" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($map[0]->ID)); ?>);">
     <div class="site-width">
@@ -75,7 +134,7 @@ while ( have_posts() ) : the_post();
         EXPLORE<br>BY BUBLR
         <a href="explore" class="arrow">EXPLORE ALL</a>
       </div>
-      
+
       <?php
       $main_post = get_posts(array('posts_per_page' => 1));
       foreach ($main_post as $post) : setup_postdata($post);
@@ -104,7 +163,7 @@ while ( have_posts() ) : the_post();
           </div>
         </div>
       <?php
-      endforeach; 
+      endforeach;
       wp_reset_postdata();
       ?>
 
@@ -136,7 +195,7 @@ while ( have_posts() ) : the_post();
           <a href="<?php the_permalink(); ?>" class="button">READ STORY</a>
         </div>
       <?php
-      endforeach; 
+      endforeach;
       wp_reset_postdata();
       ?>
 
@@ -157,7 +216,7 @@ while ( have_posts() ) : the_post();
         $fourth_post_excerpt = implode('', array_slice($split, 0, 4));
 
         $fourth_post_link = get_the_permalink();
-      endforeach; 
+      endforeach;
       wp_reset_postdata();
       ?>
 
@@ -181,7 +240,7 @@ while ( have_posts() ) : the_post();
       <div class="all">
         <a href="explore" class="arrow">EXPLORE ALL</a>
       </div>
-      
+
       <div class="sidebar-shadow">
         <div id="weather">
           <h5>MILWAUKEE</h5>
@@ -199,7 +258,7 @@ while ( have_posts() ) : the_post();
           $cc = $obj['currently'];
           $hc = $obj['hourly'];
           ?>
-          
+
           <div class="icon"><canvas id="<?php echo $cc['icon']; ?>"></canvas></div>
           <h3><?php echo round($cc['temperature']); ?>&deg;</h3><br>
           <h4><?php echo $cc['summary']; ?></h4>
@@ -244,11 +303,11 @@ while ( have_posts() ) : the_post();
       </div> <!-- END .sidebar-shadow -->
     </div> <!-- END .sidebar -->
   </div>
-  
+
   <div id="burning">
     <div>
       <i class="fg fg-biker"></i>
-      
+
       <div id="carbon-trigger">
         BURNING CALORIES, NOT CARBON.<br>
         OFFSET TO DATE <?php echo get_theme_mod('bublr_carbon_year'); ?>:
@@ -268,7 +327,7 @@ while ( have_posts() ) : the_post();
 
     var Carbon = new CountUp("carbon", 0, <?php echo get_theme_mod('bublr_carbon_pounds'); ?>, 0, 2, { suffix: ' LBS' });
   </script>
-  
+
   <?php
 endwhile;
 
