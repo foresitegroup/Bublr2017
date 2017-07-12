@@ -1800,6 +1800,56 @@ A.mm-close {
   top: 1px;
 }
 
+#pricing-header { position: relative; }
+
+#pricing-header .image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: calc(100% + 17px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#pricing-header .text {
+  width: 45%;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8em;
+  padding: 106px 0 71px;
+}
+
+#pricing-header .text P { margin: 0; }
+
+#pricing-header .text H1 {
+  margin: 0 0 0.04em;
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 1em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+#pricing-header .text .bluetext {
+  display: inline-block;
+  margin-top: 3em;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+}
+
+#pricing-header .text .bluetext:after {
+  display: inline-block;
+  font-family: "Bublr";
+  content: "\e916";
+  transform: rotate(90deg);
+  color: #FFFFFF;
+  font-size: 50%;
+  margin-left: 0.5em;
+}
+
 .contact {
   padding: 8em 0;
   color: #FFFFFF;
