@@ -1811,6 +1811,7 @@ A.mm-close {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
 }
 
 #pricing-header .text {
@@ -1848,6 +1849,128 @@ A.mm-close {
   color: #FFFFFF;
   font-size: 50%;
   margin-left: 0.5em;
+}
+
+#pricing-content {
+  background: #F6F6F6;
+  padding: 100px 0;
+}
+
+#pricing-content P { margin: 0; }
+
+#pricing-content .pricing {
+  display: inline-block;
+  vertical-align: top;
+  width: 19.6%;
+  position: relative;
+  padding: 0 3.16%;
+  border-left: 6px solid #EBEBEB;
+  text-align: center;
+  font-size: 14px;
+}
+
+#pricing-content .pricing:first-of-type {
+  padding-left: 0;
+  border-left: 0;
+}
+
+#pricing-content .pricing:last-of-type {
+  padding-right: 0;
+}
+
+#pricing-content .pricing:focus { outline: 0; }
+
+#pricing-content .pricing H2 {
+  margin: 0 0 2.5em;
+  padding: 0.9em 0 0.7em;
+  border-radius: 30px/50%;
+  background: #2D3590;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 157.14%;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+}
+
+#pricing-content .pricing H3 {
+  margin: 0 0 0.4em;
+  color: #2D3590;
+  font-weight: 800;
+  font-size: 714.28%;
+  line-height: 1em;
+}
+
+#pricing-content .pricing H3:before {
+  content: "$";
+  font-size: 55%;
+  position: relative;
+  top: -0.6em;
+  font-weight: 700;
+}
+
+#pricing-content .pricing H3 SPAN {
+  display: block;
+  font-weight: 700;
+  font-size: 16%;
+  line-height: 1em;
+  position: relative;
+  top: -0.5em;
+}
+
+#pricing-content .pricing .button:link,
+#pricing-content .pricing .button:visited {
+  border-color: #13B5EA;
+  background: #13B5EA;
+  color: #FFFFFF;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  padding: 0.8em 1.2em 0.5em;
+}
+
+#pricing-content .pricing .button:hover,
+#pricing-content .pricing .button:active,
+#pricing-content .pricing .button:before,
+#pricing-content .pricing .button:after {
+  background: #FFFFFF;
+  color: #13B5EA;
+}
+
+#pricing-content .pricing H4 {
+  margin: 2.5em 0 3.5em;
+  font-weight: 700;
+  font-size: 114.28%;
+  line-height: 1em;
+}
+
+#pricing-content .pricing .additional {
+  min-height: 4.5em;
+  font-weight: 700;
+  font-size: 121.42%;
+  line-height: 1.3em;
+}
+
+#pricing-content .pricing .additional H5 {
+  margin: 0 0 0.25em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 94%;
+  letter-spacing: 0.15em;
+}
+
+#pricing-content .pricing .additional STRONG { font-weight: 900; }
+
+#pricing-content .pricing IMG {
+  display: block;
+  max-width: 66px;
+  height: auto;
+  margin: 2em auto 3em;
+}
+
+#pricing-content .pricing.single IMG { opacity: 0; }
+
+#pricing-content .pricing HR {
+  width: 75%;
+  margin: 1em auto;
 }
 
 .contact {
@@ -2180,6 +2303,9 @@ A.mm-close {
   #how .one-fourth { font-size: 2.3vw; }
 
   #explore .main .header { width: 96%; }
+  
+  #pricing-content .pricing { font-size: 1.1vw; width: 19.4%; }
+  #pricing-content .pricing H2 { border-radius: 13%/50%; }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -2242,6 +2368,8 @@ A.mm-close {
        -moz-columns: 1;
             columns: 1;
   }
+
+  #pricing-content .pricing { width: 19.2%; }
 }
 
 @media only screen and (max-width: 900px) {
@@ -2316,6 +2444,25 @@ A.mm-close {
   .footer-third.text { margin-right: 10%; }
   .footer-third.menu { margin-right: 0; }
   .footer-third.subscribe { width: 33%; }
+
+  #pricing-content .site-width {
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1em;
+  }
+
+  #pricing-content .pricing {
+    white-space: normal;
+    width: 33%;
+    padding: 0 5%;
+    font-size: 1.75vw;
+  }
+
+  #pricing-content .pricing:first-of-type { padding-left: 5%; }
+  #pricing-content .pricing:last-of-type { padding-right: 5%; }
 }
 
 @media only screen and (max-width: 725px) {
