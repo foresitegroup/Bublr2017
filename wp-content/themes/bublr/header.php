@@ -72,7 +72,7 @@
   </div>
 
   <div class="site-width">
-    <a href="." id="logo"></a>
+    <a href="<?php echo home_url(); ?>" id="logo"></a>
 
     <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main-menu' ) ); ?>
 

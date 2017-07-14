@@ -1853,10 +1853,24 @@ A.mm-close {
 
 #pricing-content {
   background: #F6F6F6;
-  padding: 100px 0;
+  padding: 140px 0 100px;
+  text-align: center;
+  position: relative;
 }
 
 #pricing-content P { margin: 0; }
+
+#pricing-content:before {
+  display: block;
+  content: "CHOOSE & RIDE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: 900 11vw/1em 'Proxima Nova';
+  color: #FBFBFB;
+  width: 50%;
+  text-align: left;
+}
 
 #pricing-content .pricing {
   display: inline-block;
@@ -1865,7 +1879,6 @@ A.mm-close {
   position: relative;
   padding: 0 3.16%;
   border-left: 6px solid #EBEBEB;
-  text-align: center;
   font-size: 14px;
 }
 
@@ -1877,8 +1890,6 @@ A.mm-close {
 #pricing-content .pricing:last-of-type {
   padding-right: 0;
 }
-
-#pricing-content .pricing:focus { outline: 0; }
 
 #pricing-content .pricing H2 {
   margin: 0 0 2.5em;
@@ -1973,6 +1984,97 @@ A.mm-close {
   margin: 1em auto;
 }
 
+#pricing-content A.arrow:link,
+#pricing-content A.arrow:visited {
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 0.25em;
+  text-decoration: underline;
+  margin-top: 100px;
+  display: inline-block;
+}
+
+#pricing-content A.arrow:hover,
+#pricing-content A.arrow:active {
+  color: #13B5EA;
+}
+
+#pricing-hacm {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.8em;
+}
+
+#pricing-hacm .site-width {
+  width: 65%;
+  padding: 6.5em 0 6em;
+}
+
+#pricing-hacm A:link,
+#pricing-hacm A:visited {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+#pricing-hacm A:hover,
+#pricing-hacm A:active {
+  color: #13B5EA;
+}
+
+#page-footer {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.1em;
+  letter-spacing: 0.15em;
+  padding: 2em 0 1.9em;
+  position: relative;
+}
+
+#page-footer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+#page-footer P { margin: 0; }
+
+#page-footer .site-width {
+  width: 60%;
+  position: relative;
+  z-index: 5;
+}
+
+#page-footer A.button:link,
+#page-footer A.button:visited {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  padding: 0.9em 1.2em 0.7em 1.4em;
+  display: inline-block;
+  margin-top: 3.1em;
+}
+
+#page-footer A.button:hover,
+#page-footer A.button:active,
+#page-footer A.button:before,
+#page-footer A.button:after {
+  border-color: #13B5EA;
+  background: #13B5EA;
+  color: #FFFFFF;
+}
+
 .contact {
   padding: 8em 0;
   color: #FFFFFF;
@@ -1996,7 +2098,7 @@ A.mm-close {
   margin: 1em 0 4em;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 .contact .form INPUT[type="text"],
@@ -2170,6 +2272,70 @@ A.mm-close {
   color: #000000;
 }
 
+#faq-content {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+#faq-content .site-width {
+  padding: 120px 4.6% 100px;
+  box-sizing: border-box;
+}
+
+#faq-content H1 {
+  margin: 0 0 1.5em;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#faq-content H2 {
+  margin: 3em 0 1.5em;
+  color: #1AB7EA;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+#faq-content DL {
+  margin: 0 0 1.5em;
+  border-bottom: 1px solid #131356;
+}
+
+#faq-content DT {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#faq-content DT:hover { text-decoration: underline; }
+
+#faq-content DD {
+  margin: 0 0 1.2em;
+}
+
+#faq-content DD P { margin: 1.5em 0 0; }
+
+#faq-content A:link,
+#faq-content A:visited {
+  color: #13B5EA;
+  text-decoration: underline;
+}
+
+#faq-content A:hover,
+#faq-content A:active {
+  color: #FFFFFF;
+}
+
+
 /* BLOG */
 .single-post P { margin: 0 0 20px; }
 
@@ -2304,6 +2470,9 @@ A.mm-close {
 
   #explore .main .header { width: 96%; }
   
+  #pricing-header .image { width: 48%; }
+  #pricing-header .text H1 { font-size: 7.8vw; }
+  
   #pricing-content .pricing { font-size: 1.1vw; width: 19.4%; }
   #pricing-content .pricing H2 { border-radius: 13%/50%; }
 }
@@ -2393,6 +2562,10 @@ A.mm-close {
   .modal-right { width: 50%; }
   .modal-right UL LI { padding-left: 35px; }
   .modal-right H2 { font-size: 3.5vw; }
+
+  #page-footer .site-width { width: 70%; }
+
+  .contact .sidebar { width: 30%; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -2463,6 +2636,21 @@ A.mm-close {
 
   #pricing-content .pricing:first-of-type { padding-left: 5%; }
   #pricing-content .pricing:last-of-type { padding-right: 5%; }
+
+  .contact .form #name,
+  .contact .form #company,
+  .contact .form #email,
+  .contact .form #phone {
+    float: none;
+    width: 100%;
+  }
+  
+  .contact .form H2 { font-size: 10.5vw; }
+
+  .contact .form .select { width: 100%; }
+
+  .contact .sidebar { font-size: 1.9vw; }
+  .contact .sidebar H4 { font-size: 130%; }
 }
 
 @media only screen and (max-width: 725px) {
@@ -2498,7 +2686,6 @@ A.mm-close {
   .footer-third.location,
   .footer-third.apps { width: 32%; }
   
-  /*.modal.show { position: relative; top: 0; transform: none; }*/
   .modal-left { width: 100%; }
   .modal-right {
     position: static;
@@ -2507,6 +2694,20 @@ A.mm-close {
   }
   .modal-right UL LI { padding-left: 60px; }
   .modal-right H2 { font-size: 36px; }
+
+  #pricing-header .image {
+    position: static;
+    width: 100%;
+    padding-top: 55%;
+  }
+
+  #pricing-header .text {
+    width: 100%;
+    padding: 4em 0;
+  }
+
+  #pricing-header .text H1 { font-size: 12.9vw; }
+  #page-footer .site-width { width: 80%; }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2567,6 +2768,29 @@ A.mm-close {
   .modal-right H2 { font-size: 6vw; }
   .modal-right A.contact-link:link,
   .modal-right A.contact-link:visited { margin-left: 5%; }
+
+  #pricing-content .pricing {
+    width: 60%;
+    padding: 0 10%;
+    font-size: 3vw;
+  }
+
+  #pricing-content .pricing:first-of-type { padding-left: 10%; }
+  #pricing-content .pricing:last-of-type { padding-right: 10%; }
+  
+  #page-footer { font-size: 7.4vw; line-height: 1.2em; }
+  #page-footer .site-width { width: 90%; }
+  
+  .contact { padding: 6em 0 4em; }
+  .contact .form,
+  .contact .sidebar {
+    float: none;
+    width: 99%;
+  }
+
+  .contact .sidebar { margin-top: 5em; font-size: 3vw; }
+
+  #faq-content H1 { font-size: 10vw; }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2616,6 +2840,12 @@ A.mm-close {
   .single-post-gallery.gallery-columns-9 A {
     width: 100%;
   }
+
+  #pricing-content .pricing {
+    font-size: 3.5vw;
+  }
+
+  .contact .sidebar { font-size: 4vw; }
 }
 
 @media only screen and (max-width: 320px) {
