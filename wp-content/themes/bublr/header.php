@@ -1,4 +1,7 @@
-<?php global $BlogInc; ?>
+<?php
+if ($_SERVER['QUERY_STRING'] == "cat=0") header("Location: " . home_url('/explore'));
+global $BlogInc;
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>

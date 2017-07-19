@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Bublr';
-  src:  url('fonts/Bublr.eot?pry4v3');
-  src:  url('fonts/Bublr.eot?pry4v3#iefix') format('embedded-opentype'),
-    url('fonts/Bublr.ttf?pry4v3') format('truetype'),
-    url('fonts/Bublr.woff?pry4v3') format('woff'),
-    url('fonts/Bublr.svg?pry4v3#Bublr') format('svg');
+  src:  url('fonts/Bublr.eot?gm10ik');
+  src:  url('fonts/Bublr.eot?gm10ik#iefix') format('embedded-opentype'),
+    url('fonts/Bublr.ttf?gm10ik') format('truetype'),
+    url('fonts/Bublr.woff?gm10ik') format('woff'),
+    url('fonts/Bublr.svg?gm10ik#Bublr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,6 +39,12 @@
 .fg-linkedin:before {
   content: "\e905";
 }
+.fg-pinterest:before {
+  content: "\e906";
+}
+.fg-google-plus:before {
+  content: "\e907";
+}
 .fg-hamburger-menu:before {
   content: "\e911";
 }
@@ -55,10 +61,16 @@
 .fg-play-right:before {
   content: "\e916";
 }
+.fg-search:before {
+  content: "\e918";
+}
 .fg-biker:before {
   content: "\e820";
   color: #4dbdec;
 }
 .fg-arrow:before {
   content: "\e914";
+}
+.fg-file:before {
+  content: "\e917";
 }

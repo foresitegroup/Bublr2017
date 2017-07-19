@@ -17,7 +17,7 @@ add_action( 'init', 'register_my_menus' );
 
 
 /* Customizer */
-function usm_customize_register( $wp_customize ) {
+function fg_customize_register( $wp_customize ) {
   $wp_customize->remove_section('title_tagline');
   $wp_customize->remove_section('static_front_page');
   $wp_customize->remove_section('custom_css');
@@ -83,7 +83,7 @@ function usm_customize_register( $wp_customize ) {
     'type'    => 'text'
   ));
 }
-add_action( 'customize_register', 'usm_customize_register' );
+add_action( 'customize_register', 'fg_customize_register' );
 remove_action( 'customize_register', 'shiftnav_register_customizers' );
 
 function bublr_sanitize_num($input) {
@@ -160,4 +160,62 @@ add_filter('the_content', 'filter_ptags_on_images');
 function filter_ptags_on_images($content){
   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
+
+
+// Excerpt length
+function wpdocs_custom_excerpt_length( $length ) {
+  return 100; // Number of words
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+// Break excerpt at sentence end
+function end_with_sentence( $excerpt ) {
+  $allowed_ends = array('.', '!', '?', '...');
+  $number_sentences = 2;
+  $excerpt_chunk = $excerpt;
+
+  for($i = 0; $i < $number_sentences; $i++){
+    $lowest_sentence_end[$i] = 100000000000000000;
+    foreach($allowed_ends as $allowed_end) {
+      $sentence_end = strpos( $excerpt_chunk, $allowed_end);
+      if ($sentence_end !== false && $sentence_end < $lowest_sentence_end[$i]) {
+        $lowest_sentence_end[$i] = $sentence_end + strlen( $allowed_end );
+      }
+      $sentence_end = false;
+    }
+
+    $sentences[$i] = substr( $excerpt_chunk, 0, $lowest_sentence_end[$i]);
+    $excerpt_chunk = substr( $excerpt_chunk, $lowest_sentence_end[$i]);
+  }
+
+  return implode('', $sentences);
+}
+add_filter('get_the_excerpt', 'end_with_sentence');
+
+
+// Search only posts
+function SearchFilter($query) {
+  if ($query->is_search) $query->set('post_type', 'post');
+
+  return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');
+
+
+// Format the single post pagination
+function FG_post_pagination($args = array()) {
+  $prev_link = (get_previous_post_link()) ? get_previous_post_link('%link', "Older Post") : '<a class="prev home-link" href="'.site_urL().'/">Explore</a>';
+  $next_link = (get_next_post_link()) ? get_next_post_link('%link', "Newer Post") : '<a class="next home-link" href="'.site_urL().'/">Explore</a>';
+
+  // Only add markup if there's somewhere to navigate to.
+  if ( $prev_link || $next_link ) {
+    echo _navigation_markup($prev_link . $next_link, ' ', ' ');
+  }
+}
+add_filter('previous_post_link', 'post_link_attributes_prev');
+add_filter('next_post_link', 'post_link_attributes_next');
+function post_link_attributes_prev($output) { return str_replace('<a href=', '<a class="prev" href=', $output); }
+function post_link_attributes_next($output) { return str_replace('<a href=', '<a class="next" href=', $output); }
 ?>
