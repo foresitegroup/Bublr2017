@@ -131,13 +131,15 @@ else :
     ?>
     <script type="text/javascript">
       jQuery(window).on("load resize",function(){
-        jQuery('.rec').each(function(){
-          var highestBox = 0;
-          jQuery(this).find('.index-post').each(function(){
-            if(jQuery(this).height() > highestBox) highestBox = jQuery(this).height();
-          })
-          jQuery(this).find('.index-post').height(highestBox);
-        });
+        if (window.innerWidth > 800) {
+          jQuery('.rec').each(function(){
+            var highestBox = 0;
+            jQuery(this).find('.index-post').each(function(){
+              if(jQuery(this).height() > highestBox) highestBox = jQuery(this).height();
+            })
+            jQuery(this).find('.index-post').height(highestBox);
+          });
+        }
       });
     </script>
   </div>

@@ -77,8 +77,8 @@ if (!is_single()) :
         /* Add the special classes to the boxes that the jQuery needs for equal heights */
         $EqualHeights = "";
         if (($counter == 1) || ($counter == 2)) $EqualHeights = "half" . $iteration;
-        if (($counter == 3) || ($counter == 4) || ($counter == 5)) $EqualHeights = "triple1" . $iteration;
-        if (($counter == 7) || ($counter == 8) || ($counter == 9)) $EqualHeights = "triple2" . $iteration;
+        if (($counter == 3) || ($counter == 4) || ($counter == 5)) $EqualHeights = "triple triple-1" . $iteration;
+        if (($counter == 7) || ($counter == 8) || ($counter == 9)) $EqualHeights = "triple triple-2" . $iteration;
         if (($counter == 4) || ($counter == 8)) $EqualHeights .= " triplemid";
         
         /* ...and set up the jQuery for equal heights */
@@ -91,17 +91,17 @@ if (!is_single()) :
         }
         if ($counter == 3) {
           $EqualHeightsjQuery .= "var highestBox = 0;
-          jQuery(this).find('.triple1" . $iteration . "').each(function(){
+          jQuery(this).find('.triple-1" . $iteration . "').each(function(){
             if(jQuery(this).height() > highestBox) highestBox = jQuery(this).height();
           })
-          jQuery(this).find('.triple1" . $iteration . "').height(highestBox);\n";
+          jQuery(this).find('.triple-1" . $iteration . "').height(highestBox);\n";
         }
         if ($counter == 7) {
           $EqualHeightsjQuery .= "var highestBox = 0;
-          jQuery(this).find('.triple2" . $iteration . "').each(function(){
+          jQuery(this).find('.triple-2" . $iteration . "').each(function(){
             if(jQuery(this).height() > highestBox) highestBox = jQuery(this).height();
           })
-          jQuery(this).find('.triple2" . $iteration . "').height(highestBox);\n";
+          jQuery(this).find('.triple-2" . $iteration . "').height(highestBox);\n";
         }
         
         /* Finally display the content */
@@ -120,6 +120,18 @@ if (!is_single()) :
             <?php echo $EqualHeightsjQuery; ?>
           });
         });
+        
+        if (window.innerWidth < 801) {
+          jQuery(".index-post").removeClass (function (index, className) {
+            return (className.match (/(^|\s)triple-\S+/g) || []).join(' ');
+          });
+        }
+
+        if (window.innerWidth < 481) {
+          jQuery(".index-post").removeClass (function (index, className) {
+            return (className.match (/(^|\s)half\S+/g) || []).join(' ');
+          });
+        }
 
         jQuery(window).on("load",function(){
           jQuery(".index-post").hide();
