@@ -58,6 +58,14 @@ while ( have_posts() ) : the_post();
         jQuery(href).removeClass('show');
       });
     });
+
+    jQuery(window).on("load resize",function(){
+      if(jQuery('#annual-pass .modal-right').height() > jQuery('#annual-pass .modal-left').height()) jQuery('#annual-pass .modal-left').css({"height": jQuery('#annual-pass .modal-right').height()-35, "padding-bottom": "0"});
+      
+      if(jQuery('#monthly-pass .modal-right').height() > jQuery('#monthly-pass .modal-left').height()) jQuery('#monthly-pass .modal-left').css({"height": jQuery('#monthly-pass .modal-right').height()-35, "padding-bottom": "0"});
+
+      if(jQuery('#pay-as-you-go .modal-right').height() > jQuery('#pay-as-you-go .modal-left').height()) jQuery('#pay-as-you-go .modal-left').css({"height": jQuery('#pay-as-you-go .modal-right').height()-35, "padding-bottom": "0"});
+    });
   </script>
 
   <div class="modal" id="annual-pass">
@@ -122,7 +130,7 @@ while ( have_posts() ) : the_post();
 
   <div id="how">
     <div class="site-width">
-      <?php echo do_shortcode('[insert page="how-it-works" display="content"]'); ?>
+      <?php echo do_shortcode('[insert page="home-page-how-it-works" display="content"]'); ?>
     </div>
   </div>
 

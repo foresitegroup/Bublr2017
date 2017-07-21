@@ -976,6 +976,8 @@ A.mm-close {
   font-weight: 900;
 }
 
+#how.steps { padding: 10em 0; }
+
 #how P { margin: 0; display: inline-block; }
 
 #how .one-fourth {
@@ -988,6 +990,8 @@ A.mm-close {
   margin: 0 6.9% 3.5em 0;
   counter-increment: numbers;
 }
+
+#how.steps .one-fourth { margin-bottom: 0; }
 
 #how .one-fourth:nth-of-type(4) { margin-right: 0%; }
 
@@ -1596,7 +1600,6 @@ A.mm-close {
 }
 
 .modal-page {
-  /*padding: 4em 0;*/
   background: #FFFFFF;
   position: relative;
 }
@@ -1800,9 +1803,11 @@ A.mm-close {
   top: 1px;
 }
 
-#pricing-header { position: relative; }
+#pricing-header,
+#how-it-works-header { position: relative; }
 
-#pricing-header .image {
+#pricing-header .image,
+#how-it-works-header .image {
   position: absolute;
   top: 0;
   right: 0;
@@ -1812,9 +1817,11 @@ A.mm-close {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 0 25px 0 rgba(0,0,0,0.35);
+  z-index: 10;
 }
 
-#pricing-header .text {
+#pricing-header .text,
+#how-it-works-header .text {
   width: 45%;
   color: #FFFFFF;
   font-weight: 400;
@@ -1823,9 +1830,11 @@ A.mm-close {
   padding: 106px 0 71px;
 }
 
-#pricing-header .text P { margin: 0; }
+#pricing-header .text P,
+#how-it-works-header .text P { margin: 0; }
 
-#pricing-header .text H1 {
+#pricing-header .text H1,
+#how-it-works-header .text H1 {
   margin: 0 0 0.04em;
   font-weight: 900;
   font-size: 96px;
@@ -2073,6 +2082,62 @@ A.mm-close {
   border-color: #13B5EA;
   background: #13B5EA;
   color: #FFFFFF;
+}
+
+#how-it-works-header .image { width: 48.54%; }
+
+#how-it-works-header .text { font-size: 16px; }
+
+#how-it-works-header .text H1 { margin: 0 0 0.4em; }
+
+#how-it-works-header .text A:link,
+#how-it-works-header .text A:visited {
+  color: #FFFFFF;
+}
+
+#how-it-works-header .text A:hover,
+#how-it-works-header .text A:active {
+  color: #13B5EA;
+}
+
+#how-it-works-header .text A.video:after {
+  font-family: 'Bublr';
+  content: "\e913";
+  display: inline-block;
+  margin-left: 0.25em;
+  position: relative;
+  top: 2px;
+}
+
+#how-it-works-content {
+  padding: 4em 0;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+#bike-image {
+  padding: 4em 0;
+  background: #FFFFFF;
+  text-align: center;
+}
+
+#bike-safety {
+  padding: 4em 0;
+  background: #F6F6F6;
+  font-size: 16px;
+}
+
+#how-it-works-prefooter {
+  padding: 4em 0;
+  background: #2D3590;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1em;
 }
 
 .contact {
@@ -2334,6 +2399,89 @@ A.mm-close {
 #faq-content A:active {
   color: #FFFFFF;
 }
+
+#faq-content IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+.media {
+  box-sizing: border-box;
+  padding: 6em 5%;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.4em;
+}
+
+.media H1 {
+  margin: 0;
+  font-weight: 900;
+  font-size: 58px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.media H2 {
+  margin: 0;
+  color: #13B5EA;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.media H2:first-of-type { margin-top: 4em; }
+
+.media H3 {
+  margin: 2.5em 0 0;
+  color: #13B5EA;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1em;
+  text-decoration: underline;
+}
+
+.media A:link,
+.media A:visited {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.media A:hover,
+.media A:active {
+  color: #13B5EA;
+}
+
+.media HR {
+  margin: 3.6em 0 4em;
+  border-top-color: #131356;
+}
+
+#media-prefooter {
+  background: #FFFFFF;
+}
+
+#media-prefooter .site-width {
+  box-sizing: border-box;
+  padding: 4em 5%;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.4em;
+}
+
+#media-prefooter A { text-decoration: underline; }
+
+
+
+
+
+
+
+
+
+
 
 
 /* BLOG */
@@ -3043,8 +3191,10 @@ A.mm-close {
 
   #explore .main .header { width: 96%; }
   
-  #pricing-header .image { width: 48%; }
-  #pricing-header .text H1 { font-size: 7.8vw; }
+  #pricing-header .image,
+  #how-it-works-header .image { width: 48%; }
+  #pricing-header .text H1,
+  #how-it-works-header .text H1 { font-size: 7.8vw; }
   
   #pricing-content .pricing { font-size: 1.1vw; width: 19.4%; }
   #pricing-content .pricing H2 { border-radius: 13%/50%; }
@@ -3177,6 +3327,7 @@ A.mm-close {
   .pricing-grid.app H2 { font-size: 5.4vw; }
 
   #how .one-fourth { width: 40%; font-size: 5vw; margin: 0 12% 2.5em 0; }
+  #how.steps .one-fourth { margin-bottom: 2.5em; }
   #how .one-fourth:nth-of-type(2) { margin-right: 0%; }
   #how .one-fourth .icon { width: 85%; margin: 0 auto 1.7em; }
 
@@ -3332,18 +3483,21 @@ A.mm-close {
   .modal-right UL LI { padding-left: 60px; }
   .modal-right H2 { font-size: 36px; }
 
-  #pricing-header .image {
+  #pricing-header .image,
+  #how-it-works-header .image {
     position: static;
     width: 100%;
     padding-top: 55%;
   }
 
-  #pricing-header .text {
+  #pricing-header .text,
+  #how-it-works-header .text {
     width: 100%;
     padding: 4em 0;
   }
 
   #pricing-header .text H1 { font-size: 12.9vw; }
+
   #page-footer .site-width { width: 80%; }
   
   .index-cats { text-align: center; }
@@ -3460,6 +3614,8 @@ A.mm-close {
   .nav-links A:visited { font-size: 20px; }
 
   .blog-footer { font-size: 4vw; }
+
+  .media H1 { font-size: 9.6vw; }
 }
 
 @media only screen and (max-width: 480px) {
