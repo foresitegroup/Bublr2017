@@ -2110,7 +2110,7 @@ A.mm-close {
 }
 
 #how-it-works-content {
-  padding: 4em 0;
+  padding: 5em 0 7em;
   text-align: center;
   color: #FFFFFF;
   font-weight: 700;
@@ -2118,26 +2118,148 @@ A.mm-close {
   line-height: 1.5em;
 }
 
-#bike-image {
-  padding: 4em 0;
+#how-it-works-content .site-width { width: 983px; }
+
+#how-it-works-content .how-video {
+  margin-top: 5em;
+  display: inline-block;
+  vertical-align: top;
+  width: 30.7%;
+  margin-right: -4px;
+  color: #1AB7EA;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+#how-it-works-content .how-video P { margin: 0; }
+
+#how-it-works-content .how-video:nth-of-type(3) { margin-left: 1.6%; margin-right: 1.6%; }
+
+#how-it-works-content .how-video A {
+  margin-top: 1.5em;
+  display: block;
+  width: 100%;
+  padding-top: 57%;
+  background: transparent url(images/burning.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#how-it-works-content .how-video A:after {
+  font-family: "Bublr";
+  content: "\e919";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 48px;
+  line-height: 1em;
+  color: #CC191E;
+  background: linear-gradient(to bottom, transparent 0%, transparent 33%, #FFFFFF 33%, #FFFFFF 66%, transparent 66%, transparent 100%);
+}
+
+#how-it-works-content .how-video A:hover {
+  background-color: #1AB7EA;
+  background-image: url(images/play-video.png) !important;
+  background-size: auto;
+}
+
+#how-it-works-content .how-video A:hover:after { content: ""; }
+
+#bike-features {
+  padding: 9em 2%;
   background: #FFFFFF;
   text-align: center;
 }
 
+#bike-features IMG {
+  max-width: 100%;
+  height: auto;
+}
+
 #bike-safety {
-  padding: 4em 0;
+  padding: 6em 0 8em;
   background: #F6F6F6;
   font-size: 16px;
 }
 
+#bike-safety .site-width { padding: 0 4%; box-sizing: border-box; }
+
+#bike-safety H1 {
+  margin: 0 0 0.1em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#bike-safety A:link,
+#bike-safety A:visited {
+  color: #2D3590;
+  text-decoration: underline;
+}
+
+#bike-safety A:hover,
+#bike-safety A:active {
+  color: #1AB7EA;
+  text-decoration: underline;
+}
+
+#bike-safety .safety-intro {
+  margin: 0;
+  width: 54%;
+  font-weight: 700;
+  padding-bottom: 3em;
+}
+
+#bike-safety .safety-point {
+  margin-top: 3em;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -4px;
+  width: 45.78%;
+}
+
+#bike-safety .safety-point:nth-of-type(even) { margin-left: 8.44%; }
+
+#bike-safety .safety-point H3 {
+  margin: 0 0 0.1em;
+  color: #1AB7EA;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1em;
+}
+
 #how-it-works-prefooter {
-  padding: 4em 0;
+  padding: 8em 0;
   background: #2D3590;
   color: #FFFFFF;
   text-align: center;
   font-weight: 900;
   font-size: 14px;
   line-height: 1em;
+  letter-spacing: 0.3em;
+}
+
+#how-it-works-prefooter A.button:link,
+#how-it-works-prefooter A.button:visited {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  border-radius: 25px/50%;
+  padding: 1.1em 1.2em 0.7em 1.5em;
+}
+
+#how-it-works-prefooter A.button:hover,
+#how-it-works-prefooter A.button:active,
+#how-it-works-prefooter A.button:before,
+#how-it-works-prefooter A.button:after {
+  color: #13B5EA;
+  border-color: #13B5EA;
+  background: #FFFFFF;
 }
 
 .contact {
@@ -3199,6 +3321,13 @@ A.mm-close {
   #pricing-content .pricing { font-size: 1.1vw; width: 19.4%; }
   #pricing-content .pricing H2 { border-radius: 13%/50%; }
 
+  #how-it-works-content .how-video { font-size: 1.9vw; letter-spacing: 0.35vw; }
+
+  #bike-safety .site-width { padding: 0; }
+  #bike-safety .safety-intro { width: 51%; }
+  #bike-safety .safety-point { width: 43.74%; }
+  #bike-safety .safety-point:nth-of-type(even) { margin-left: 12.52%; }
+
   .blog-single .first-post .site-width { width: 96%; }
 
   #page-footer .site-width.blog-footer { width: 75%; }
@@ -3269,6 +3398,8 @@ A.mm-close {
 
   #pricing-content .pricing { width: 19.2%; }
 
+  #how-it-works-content .site-width { width: 96%; }
+
   .single-post P, .single-post BLOCKQUOTE,
   .single-post H1, .single-post H2,
   .single-post H3, .single-post H4,
@@ -3299,6 +3430,9 @@ A.mm-close {
   .modal-right { width: 50%; }
   .modal-right UL LI { padding-left: 35px; }
   .modal-right H2 { font-size: 3.5vw; }
+
+  #how-it-works-content .how-video { width: 45%; font-size: 2.5vw; letter-spacing: 0.5vw; }
+  #how-it-works-content .how-video:nth-of-type(3) { margin-left: 3%; margin-right: 0; }
 
   #page-footer .site-width { width: 70%; }
 
@@ -3498,6 +3632,10 @@ A.mm-close {
 
   #pricing-header .text H1 { font-size: 12.9vw; }
 
+  #bike-safety H1 { font-size: 12.5vw; }
+
+  #bike-safety .safety-intro { width: 100%; }
+
   #page-footer .site-width { width: 80%; }
   
   .index-cats { text-align: center; }
@@ -3581,6 +3719,12 @@ A.mm-close {
 
   #pricing-content .pricing:first-of-type { padding-left: 10%; }
   #pricing-content .pricing:last-of-type { padding-right: 10%; }
+
+  #how-it-works-content .how-video { width: 96%; font-size: 5vw; letter-spacing: 0.9vw; }
+  #how-it-works-content .how-video:nth-of-type(3) { margin-left: 0; }
+
+  #bike-safety .safety-point { width: 100%; }
+  #bike-safety .safety-point:nth-of-type(even) { margin-left: 0; }
   
   #page-footer { font-size: 7.4vw; line-height: 1.2em; }
   #page-footer .site-width { width: 90%; }
@@ -3666,9 +3810,9 @@ A.mm-close {
     width: 100%;
   }
 
-  #pricing-content .pricing {
-    font-size: 3.5vw;
-  }
+  #pricing-content .pricing { font-size: 3.5vw; }
+
+  #how-it-works-prefooter { font-size: 3vw; }
 
   .contact .sidebar { font-size: 4vw; }
 

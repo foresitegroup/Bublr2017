@@ -23,30 +23,41 @@ $header = get_posts(array('name' => 'how-it-works-header', 'post_type' => 'page'
 </div>
 
 <div id="how-it-works-content">
-  <div class="site-width">
-    <?php
-    while ( have_posts() ) : the_post();
-      the_content();
-    endwhile;
-    ?>
-  </div>
+  <?php
+  while ( have_posts() ) : the_post();
+    the_content();
+  endwhile;
+  ?>
 </div>
 
-<div id="bike-image">
-  BIKE IMAGE
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery('#how-it-works-content').each(function(){
+      jQuery(this).find('.how-video A').each(function(){
+        var href = jQuery(this).attr('href');
+        var id = href.split("=");
+        jQuery(this).css("background-image", "url(http://img.youtube.com/vi/"+id[1]+"/maxresdefault.jpg)");
+      });
+    });
+  });
+</script>
+
+<div id="bike-features">
+  <?php echo do_shortcode('[insert page="bike-features" display="content"]'); ?>
 </div>
 
 <div id="bike-safety">
   <div class="site-width">
-    BIKE SAFETY
+    <?php echo do_shortcode('[insert page="bike-safety" display="title"]'); ?>
+    <?php echo do_shortcode('[insert page="bike-safety" display="content"]'); ?>
   </div>
 </div>
 
 <div id="how-it-works-prefooter">
-  PREFOOTER
+  <?php echo do_shortcode('[insert page="how-it-works-prefooter" display="content"]'); ?>
 </div>
 
-<?php $footer = get_posts(array('name' => 'pricing-footer', 'post_type' => 'page')); ?>
+<?php $footer = get_posts(array('name' => 'how-it-works-footer', 'post_type' => 'page')); ?>
 <div id="page-footer" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($footer[0]->ID)); ?>);">
   <div class="site-width">
     <?php echo do_shortcode('[insert page="'.$footer[0]->ID.'" display="content"]'); ?>

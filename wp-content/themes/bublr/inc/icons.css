@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Bublr';
-  src:  url('fonts/Bublr.eot?gm10ik');
-  src:  url('fonts/Bublr.eot?gm10ik#iefix') format('embedded-opentype'),
-    url('fonts/Bublr.ttf?gm10ik') format('truetype'),
-    url('fonts/Bublr.woff?gm10ik') format('woff'),
-    url('fonts/Bublr.svg?gm10ik#Bublr') format('svg');
+  src:  url('fonts/Bublr.eot?mmajrz');
+  src:  url('fonts/Bublr.eot?mmajrz#iefix') format('embedded-opentype'),
+    url('fonts/Bublr.ttf?mmajrz') format('truetype'),
+    url('fonts/Bublr.woff?mmajrz') format('woff'),
+    url('fonts/Bublr.svg?mmajrz#Bublr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -60,6 +60,9 @@
 }
 .fg-play-right:before {
   content: "\e916";
+}
+.fg-youtube-play:before {
+  content: "\e919";
 }
 .fg-search:before {
   content: "\e918";
