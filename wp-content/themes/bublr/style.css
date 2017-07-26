@@ -1519,6 +1519,11 @@ A.mm-close {
   background: #2D3590;
 }
 
+.footer-third.location IMG {
+  height: 30px;
+  width: auto;
+}
+
 .footer-third .footer-menu UL {
   margin: 0;
   padding: 0;
@@ -2596,16 +2601,6 @@ A.mm-close {
 #media-prefooter A { text-decoration: underline; }
 
 
-
-
-
-
-
-
-
-
-
-
 /* BLOG */
 .first-post {
   background-position: center center;
@@ -3267,17 +3262,6 @@ A.mm-close {
 #page-footer .blog-footer A.button:visited {
   margin-top: 5em;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

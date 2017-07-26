@@ -105,7 +105,7 @@ while ( have_posts() ) : the_post();
   </div>
 
   <div id="home-pricing">
-    <div class="background-text">MILWAUKEE<br>BIKE<br>SHARE</div>
+    <div class="background-text">GREATER<br>MILWAUKEE'S<br>NONPROFIT<br>BIKE<br>SHARE</div>
 
     <div class="site-width">
       <div class="background-text bottom">BUBLR<br>APP</div>

@@ -3,7 +3,7 @@
     <img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png" alt="" id="footer-logo">
 
     <div class="footer-third text">
-      Bublr Bikes is Milwaukee's bike share program that delivers an accessible, convenient, integrated and sustainable bike share system for all.
+      <?php echo do_shortcode('[insert page="footer" display="content"]'); ?>
 
       <div class="social">
         <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter"></a>'; ?>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="footer-third location">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/milwaukee-wi.png" alt="Milwaukee Wisconsin">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/greater-milwaukee.png" alt="Greater Milwaukee">
     </div>
 
     <div class="footer-third apps">
