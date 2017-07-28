@@ -1809,10 +1809,12 @@ A.mm-close {
 }
 
 #pricing-header,
-#how-it-works-header { position: relative; }
+#how-it-works-header,
+#about-header { position: relative; }
 
 #pricing-header .image,
-#how-it-works-header .image {
+#how-it-works-header .image,
+#about-header .image {
   position: absolute;
   top: 0;
   right: 0;
@@ -1826,7 +1828,8 @@ A.mm-close {
 }
 
 #pricing-header .text,
-#how-it-works-header .text {
+#how-it-works-header .text,
+#about-header .text {
   width: 45%;
   color: #FFFFFF;
   font-weight: 400;
@@ -1836,10 +1839,12 @@ A.mm-close {
 }
 
 #pricing-header .text P,
-#how-it-works-header .text P { margin: 0; }
+#how-it-works-header .text P,
+#about-header .text P { margin: 0; }
 
 #pricing-header .text H1,
-#how-it-works-header .text H1 {
+#how-it-works-header .text H1,
+#about-header .text H1 {
   margin: 0 0 0.04em;
   font-weight: 900;
   font-size: 96px;
@@ -2172,6 +2177,238 @@ A.mm-close {
 }
 
 #how-it-works-content .how-video A:hover:after { content: ""; }
+
+#about-header .image { width: 48.54%; }
+
+#about-header .text { font-size: 16px; }
+
+#about-header .text H1 { margin: 0 0 0.4em; line-height: 1.1em; }
+
+#about-header .text .fg {
+  display: inline-block;
+  transform: rotate(90deg);
+  font-size: 50%;
+  margin-left: 0.5em;
+}
+
+#about-postheader {
+  padding: 5em 0 3.5em;
+  background: #1AB7EA;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.8em;
+}
+
+#about-postheader .left {
+  float: left;
+  width: 54%;
+  letter-spacing: 0.02em;
+}
+
+#about-postheader .right {
+  float: right;
+  width: 30%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+#about-postheader .right H2 {
+  margin: 0;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+}
+
+#about-postheader .right P { margin: 0.3em 0 2.5em; }
+
+#about-content {
+  padding: 7em 0;
+  background: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+#about-content H2 {
+  margin: 0 0 2em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#about-content .two-col {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 10.8vw;
+  -moz-column-gap: 10.8vw;
+  column-gap: 10.8vw;
+  
+}
+
+#about-content .two-col P {
+  margin: 0 0 3em;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+#about-content H3 {
+  margin: 0 0 0.25em;
+  color: #13B5EA;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1em;
+}
+
+#about-who-wins {
+  background: #13B5EA;
+  text-align: center;
+}
+
+#about-who-wins INPUT { display: none; }
+
+#about-who-wins LABEL {
+  display: inline-block;
+  margin: 0 2.6%;
+  padding: 30px 0 23px;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  position: relative;
+}
+
+#about-who-wins LABEL H1 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+#about-who-wins LABEL:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#about-who-wins LABEL:last-of-type {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#about-who-wins INPUT:checked + LABEL {
+  color: #2D3590;
+  border-bottom: 8px solid #2D3590;
+}
+
+#about-who-wins > DIV {
+  display: none;
+  background: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.8em;
+  text-align: left;
+}
+
+#tab1:checked ~ #tab-content1 { display: block; }
+#tab2:checked ~ #tab-content2 { display: block; }
+#tab3:checked ~ #tab-content3 { display: block; }
+#tab4:checked ~ #tab-content4 { display: block; }
+
+#about-who-wins .tab-content { position: relative; }
+
+#about-who-wins .tab-content .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about-who-wins .tab-content .text {
+  margin-left: 50%;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 95px 0 50px;
+  min-height: 512px;
+}
+
+#about-who-wins .tab-content .text .point {
+  padding-left: 45px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-bottom: 3em;
+  position: relative;
+}
+
+#about-who-wins .tab-content .text .point:after {
+  font-family: "Bublr";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-20%);
+  font-weight: 400;
+  font-size: 24px;
+  color: #13B5EA;
+}
+
+#about-who-wins .tab-content .text .point.store:after { content: "\e704"; }
+#about-who-wins .tab-content .text .point.money:after { content: "\e705"; }
+#about-who-wins .tab-content .text .point.bike:after { content: "\e701"; }
+#about-who-wins .tab-content .text .point.wallet:after { content: "\e702"; }
+#about-who-wins .tab-content .text .point.flame:after { content: "\e703"; }
+#about-who-wins .tab-content .text .point.heart:after { content: "\e706"; }
+#about-who-wins .tab-content .text .point.chain:after { content: "\e707"; }
+
+#about-who-wins .tab-content .text .point P { margin: 0; }
+
+#about-who-wins .tab-content .text .point H3 {
+  margin: 0 0 0.1em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#about-prefooter {
+  padding: 5em 0 4em;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.8em;
+}
+
+#about-prefooter .button:link, #about-prefooter .button:visited {
+  margin-top: 4em;
+  border-color: #13B5EA;
+  border-radius: 2em/50%;
+  padding: 1.2em 1.5em 0.8em 1.7em;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+}
+
+#about-prefooter .button:hover, #about-prefooter .button:active,
+#about-prefooter .button:before, #about-prefooter .button:after { background: #13B5EA; }
+
+#page-footer.about-footer { background-position: center top; }
+#page-footer.about-footer .site-width { width: 71%; }
 
 #bike-features {
   padding: 9em 2%;

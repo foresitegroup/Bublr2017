@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Bublr';
-  src:  url('fonts/Bublr.eot?mmajrz');
-  src:  url('fonts/Bublr.eot?mmajrz#iefix') format('embedded-opentype'),
-    url('fonts/Bublr.ttf?mmajrz') format('truetype'),
-    url('fonts/Bublr.woff?mmajrz') format('woff'),
-    url('fonts/Bublr.svg?mmajrz#Bublr') format('svg');
+  src:  url('fonts/Bublr.eot?ahvgt6');
+  src:  url('fonts/Bublr.eot?ahvgt6#iefix') format('embedded-opentype'),
+    url('fonts/Bublr.ttf?ahvgt6') format('truetype'),
+    url('fonts/Bublr.woff?ahvgt6') format('woff'),
+    url('fonts/Bublr.svg?ahvgt6#Bublr') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fg-bike:before {
+  content: "\e701";
+}
+.fg-heart:before {
+  content: "\e706";
+}
+.fg-money:before {
+  content: "\e705";
+}
+.fg-store:before {
+  content: "\e704";
+}
+.fg-flame:before {
+  content: "\e703";
+}
+.fg-wallet:before {
+  content: "\e702";
+}
+.fg-chain:before {
+  content: "\e707";
+}
 .fg-facebook:before {
   content: "\e901";
 }
