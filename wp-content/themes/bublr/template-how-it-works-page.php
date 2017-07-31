@@ -6,7 +6,7 @@ get_header();
 $header = get_posts(array('name' => 'how-it-works-header', 'post_type' => 'page'));
 ?>
 
-<div id="how-it-works-header">
+<div id="page-header" class="how-it-works-header">
   <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($header[0]->ID)); ?>);"></div>
 
   <div class="site-width">

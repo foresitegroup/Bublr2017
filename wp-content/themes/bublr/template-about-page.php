@@ -6,7 +6,7 @@ get_header();
 $header = get_posts(array('name' => 'about-header', 'post_type' => 'page'));
 ?>
 
-<div id="about-header">
+<div id="page-header" class="about-header">
   <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($header[0]->ID)); ?>);"></div>
 
   <div class="site-width">
@@ -49,43 +49,43 @@ $header = get_posts(array('name' => 'about-header', 'post_type' => 'page'));
   <label for="tab4"><?php echo do_shortcode('[insert page="'.$tab4[0]->ID.'" display="title"]'); ?></label>
 
   <div id="tab-content1" class="tab-content">
-    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab1[0]->ID)); ?>);"></div>
-
     <div class="site-width">
       <div class="text">
         <?php echo do_shortcode('[insert page="'.$tab1[0]->ID.'" display="content"]'); ?>
       </div>
     </div>
+
+    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab1[0]->ID)); ?>);"></div>
   </div>
 
   <div id="tab-content2" class="tab-content">
-    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab2[0]->ID)); ?>);"></div>
-
     <div class="site-width">
       <div class="text">
         <?php echo do_shortcode('[insert page="'.$tab2[0]->ID.'" display="content"]'); ?>
       </div>
     </div>
+
+    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab2[0]->ID)); ?>);"></div>
   </div>
 
   <div id="tab-content3" class="tab-content">
-    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab3[0]->ID)); ?>);"></div>
-
     <div class="site-width">
       <div class="text">
         <?php echo do_shortcode('[insert page="'.$tab3[0]->ID.'" display="content"]'); ?>
       </div>
     </div>
+
+    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab3[0]->ID)); ?>);"></div>
   </div>
 
   <div id="tab-content4" class="tab-content">
-    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab4[0]->ID)); ?>);"></div>
-
     <div class="site-width">
       <div class="text">
         <?php echo do_shortcode('[insert page="'.$tab4[0]->ID.'" display="content"]'); ?>
       </div>
     </div>
+
+    <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($tab4[0]->ID)); ?>);"></div>
   </div>
 </div>
 
