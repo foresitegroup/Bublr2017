@@ -48,6 +48,12 @@ while ( have_posts() ) : the_post();
           var href = jQuery(this).attr('href');
           var parts = href.split("/");
           var slug = parts[parts.length-1] !== '' ? parts[parts.length-1] : parts[parts.length-2];
+
+          if (jQuery('#'+slug).height() > jQuery(window).height()) {
+            jQuery('#modal-wrap').addClass('tall');
+            jQuery('#'+slug).addClass('tall');
+          }
+
           jQuery('#'+slug).addClass('show');
         }
       });
@@ -55,7 +61,8 @@ while ( have_posts() ) : the_post();
       jQuery('.modal-close').click(function(e){
         e.preventDefault();
         var href = jQuery(this).attr('href');
-        jQuery(href).removeClass('show');
+        jQuery(href).removeClass('show tall');
+        jQuery('#modal-wrap').removeClass('tall');
       });
     });
 
@@ -68,40 +75,42 @@ while ( have_posts() ) : the_post();
     });
   </script>
 
-  <div class="modal" id="annual-pass">
-    <div class="modal-menu">
-      <div class="site-width">
-        <a href="#annual-pass" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
+  <div id="modal-wrap">
+    <div class="modal" id="annual-pass">
+      <div class="modal-menu">
+        <div class="site-width">
+          <a href="#annual-pass" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
 
-        <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+          <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+        </div>
       </div>
+
+      <?php echo do_shortcode('[insert page="annual-pass" display="content"]'); ?>
     </div>
 
-    <?php echo do_shortcode('[insert page="annual-pass" display="content"]'); ?>
-  </div>
+    <div class="modal" id="monthly-pass">
+      <div class="modal-menu">
+        <div class="site-width">
+          <a href="#monthly-pass" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
 
-  <div class="modal" id="monthly-pass">
-    <div class="modal-menu">
-      <div class="site-width">
-        <a href="#monthly-pass" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
-
-        <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+          <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+        </div>
       </div>
+
+      <?php echo do_shortcode('[insert page="monthly-pass" display="content"]'); ?>
     </div>
 
-    <?php echo do_shortcode('[insert page="monthly-pass" display="content"]'); ?>
-  </div>
+    <div class="modal" id="pay-as-you-go">
+      <div class="modal-menu">
+        <div class="site-width">
+          <a href="#pay-as-you-go" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
 
-  <div class="modal" id="pay-as-you-go">
-    <div class="modal-menu">
-      <div class="site-width">
-        <a href="#pay-as-you-go" class="button modal-close"><i class="fg fg-arrow"></i> BACK</a>
-
-        <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+          <a href="https://bublrbikes.bcycle.com/join-now" class="button pass">PURCHASE PASS</a>
+        </div>
       </div>
-    </div>
 
-    <?php echo do_shortcode('[insert page="pay-as-you-go" display="content"]'); ?>
+      <?php echo do_shortcode('[insert page="pay-as-you-go" display="content"]'); ?>
+    </div>
   </div>
 
   <div id="home-pricing">

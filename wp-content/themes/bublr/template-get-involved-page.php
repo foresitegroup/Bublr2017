@@ -1,28 +1,22 @@
 <?php
-/* Template Name: About*/
+/* Template Name: Get Involved */
 
 get_header();
 
-$header = get_posts(array('name' => 'about-header', 'post_type' => 'page'));
+$header = get_posts(array('name' => 'get-involved-header', 'post_type' => 'page'));
 ?>
 
-<div id="page-header" class="about-header">
+<div id="page-header" class="get-involved-header">
   <div class="image" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($header[0]->ID)); ?>);"></div>
 
   <div class="site-width">
     <div class="text">
-      <?php the_title('<h1>', '</h1>'); echo do_shortcode('[insert page="'.$header[0]->ID.'" display="content"]'); ?>
+      <?php echo do_shortcode('[insert page="'.$header[0]->ID.'" display="content"]'); ?>
     </div>
   </div>
 </div>
 
-<div id="about-postheader">
-  <div class="site-width">
-    <?php echo do_shortcode('[insert page="about-postheader" display="content"]'); ?>
-  </div>
-</div>
-
-<div id="about-content">
+<div id="get-involved-content">
   <div class="site-width">
     <?php
     while ( have_posts() ) : the_post();
@@ -34,10 +28,10 @@ $header = get_posts(array('name' => 'about-header', 'post_type' => 'page'));
 
 <div class="tabs">
   <?php
-  $tab1 = get_posts(array('name' => 'tab-who-wins', 'post_type' => 'page'));
-  $tab2 = get_posts(array('name' => 'tab-local-business', 'post_type' => 'page'));
-  $tab3 = get_posts(array('name' => 'tab-individuals', 'post_type' => 'page'));
-  $tab4 = get_posts(array('name' => 'tab-community', 'post_type' => 'page'));
+  $tab1 = get_posts(array('name' => 'tab-volunteer', 'post_type' => 'page'));
+  $tab2 = get_posts(array('name' => 'tab-events', 'post_type' => 'page'));
+  $tab3 = get_posts(array('name' => 'tab-promotions', 'post_type' => 'page'));
+  $tab4 = get_posts(array('name' => 'tab-team-pass-program', 'post_type' => 'page'));
   ?>
   <input id="tab1" type="radio" name="tabs" checked>
   <label for="tab1"><?php echo do_shortcode('[insert page="'.$tab1[0]->ID.'" display="title"]'); ?></label>
@@ -89,14 +83,14 @@ $header = get_posts(array('name' => 'about-header', 'post_type' => 'page'));
   </div>
 </div>
 
-<div id="about-prefooter">
+<div id="get-involved-prefooter">
   <div class="site-width">
-    <?php echo do_shortcode('[insert page="about-prefooter" display="content"]'); ?>
+    <?php echo do_shortcode('[insert page="get-involved-prefooter" display="content"]'); ?>
   </div>
 </div>
 
-<?php $footer = get_posts(array('name' => 'about-footer', 'post_type' => 'page')); ?>
-<div id="page-footer" class="about-footer" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($footer[0]->ID)); ?>);">
+<?php $footer = get_posts(array('name' => 'get-involved-footer', 'post_type' => 'page')); ?>
+<div id="page-footer" class="get-involved-footer" style="background-image: url(<?php echo wp_get_attachment_url(get_post_thumbnail_id($footer[0]->ID)); ?>);">
   <div class="site-width">
     <?php echo do_shortcode('[insert page="'.$footer[0]->ID.'" display="content"]'); ?>
   </div>

@@ -316,7 +316,7 @@ A.arrow:after {
 #header {
   background: #13B5EA;
   position: relative;
-  z-index: 15;
+  z-index: 999;
 }
 
 #header.sticky {
@@ -1504,6 +1504,8 @@ A.mm-close {
 
 .footer-third.text { line-height: 2em; }
 
+.footer-third.text P { margin: -0.5em 0 2em; }
+
 #footer .social { margin-top: 1.5em; }
 
 #footer .social A:link,
@@ -1603,6 +1605,14 @@ A.mm-close {
 .modal.show {
   left: 0;
 }
+
+.modal.tall {
+  position: absolute;
+  top: 0;
+  transform: none;
+}
+
+#modal-wrap.tall { position: relative; }
 
 .modal-page {
   background: #FFFFFF;
@@ -2145,6 +2155,7 @@ A.mm-close {
   background: transparent url(images/burning.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
+  transition: none;
 }
 
 #how-it-works-content .how-video A:after {
@@ -2256,14 +2267,14 @@ A.mm-close {
   line-height: 1em;
 }
 
-#about-who-wins {
+.tabs {
   background: #13B5EA;
   text-align: center;
 }
 
-#about-who-wins INPUT { display: none; }
+.tabs INPUT { display: none; }
 
-#about-who-wins LABEL {
+.tabs LABEL {
   display: inline-block;
   margin: 0 2.6%;
   padding: 30px 0 23px;
@@ -2278,29 +2289,29 @@ A.mm-close {
   position: relative;
 }
 
-#about-who-wins LABEL H1 {
+.tabs LABEL H1 {
   margin: 0;
   font-weight: inherit;
   font-size: inherit;
   text-transform: uppercase;
 }
 
-#about-who-wins LABEL:first-of-type {
+.tabs LABEL:first-of-type {
   margin-left: 0;
   padding-left: 0;
 }
 
-#about-who-wins LABEL:last-of-type {
+.tabs LABEL:last-of-type {
   margin-right: 0;
   padding-right: 0;
 }
 
-#about-who-wins INPUT:checked + LABEL {
+.tabs INPUT:checked + LABEL {
   color: #2D3590;
   border-bottom: 8px solid #2D3590;
 }
 
-#about-who-wins > DIV {
+.tabs > DIV {
   display: none;
   background: #FFFFFF;
   font-size: 16px;
@@ -2313,9 +2324,9 @@ A.mm-close {
 #tab3:checked ~ #tab-content3 { display: block; }
 #tab4:checked ~ #tab-content4 { display: block; }
 
-#about-who-wins .tab-content { position: relative; }
+.tabs .tab-content { position: relative; }
 
-#about-who-wins .tab-content .image {
+.tabs .tab-content .image {
   position: absolute;
   top: 0;
   left: 0;
@@ -2326,7 +2337,7 @@ A.mm-close {
   background-size: cover;
 }
 
-#about-who-wins .tab-content .text {
+.tabs .tab-content .text {
   margin-left: 50%;
   width: 50%;
   box-sizing: border-box;
@@ -2334,7 +2345,19 @@ A.mm-close {
   min-height: 512px;
 }
 
-#about-who-wins .tab-content .text .point {
+.tabs .tab-content .text P { margin: 0 0 1.6em; }
+
+.tabs .tab-content .text H3 {
+  margin: 0.1em 0;
+  color: #13B5EA;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tabs .tab-content .text .point {
   padding-left: 45px;
   font-weight: 700;
   line-height: 1.5em;
@@ -2342,7 +2365,7 @@ A.mm-close {
   position: relative;
 }
 
-#about-who-wins .tab-content .text .point:after {
+.tabs .tab-content .text .point:after {
   font-family: "Bublr";
   position: absolute;
   top: 0;
@@ -2353,25 +2376,17 @@ A.mm-close {
   color: #13B5EA;
 }
 
-#about-who-wins .tab-content .text .point.store:after { content: "\e704"; }
-#about-who-wins .tab-content .text .point.money:after { content: "\e705"; }
-#about-who-wins .tab-content .text .point.bike:after { content: "\e701"; }
-#about-who-wins .tab-content .text .point.wallet:after { content: "\e702"; }
-#about-who-wins .tab-content .text .point.flame:after { content: "\e703"; }
-#about-who-wins .tab-content .text .point.heart:after { content: "\e706"; }
-#about-who-wins .tab-content .text .point.chain:after { content: "\e707"; }
+.tabs .tab-content .text .point.store:after { content: "\e704"; }
+.tabs .tab-content .text .point.money:after { content: "\e705"; }
+.tabs .tab-content .text .point.bike:after { content: "\e701"; }
+.tabs .tab-content .text .point.wallet:after { content: "\e702"; }
+.tabs .tab-content .text .point.flame:after { content: "\e703"; }
+.tabs .tab-content .text .point.heart:after { content: "\e706"; }
+.tabs .tab-content .text .point.chain:after { content: "\e707"; }
 
-#about-who-wins .tab-content .text .point P { margin: 0; }
+.tabs .tab-content .text .point P { margin: 0; }
 
-#about-who-wins .tab-content .text .point H3 {
-  margin: 0 0 0.1em;
-  color: #2D3590;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 1em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+.tabs .tab-content .text .point H3 { color: #2D3590; }
 
 #about-prefooter {
   padding: 5em 0 4em;
@@ -2398,6 +2413,71 @@ A.mm-close {
 
 #page-footer.about-footer { background-position: center top; }
 #page-footer.about-footer .site-width { width: 71%; }
+
+#page-header.get-involved-header .image { width: 48.54%; }
+
+#page-header.get-involved-header .text { padding: 155px 0; font-weight: 800; font-size: 27px; }
+
+#get-involved-content {
+  padding: 10em 0;
+  background: #FFFFFF;
+}
+
+#get-involved-content .left {
+  float: left;
+  width: 57%;
+  color: #2D3590;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.8em;
+}
+
+#get-involved-content .right {
+  float: right;
+  width: 21%;
+  margin: 0.5em 8% 0 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+#get-involved-content .right A { text-decoration: underline; }
+
+#get-involved-prefooter {
+  padding: 5em 0 4em;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.8em;
+}
+
+#get-involved-prefooter H2 {
+  margin: 0 0 1em;
+  color: #13B5EA;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#get-involved-prefooter .button:link, #get-involved-prefooter .button:visited {
+  margin-top: 4em;
+  border-color: #13B5EA;
+  border-radius: 2em/50%;
+  padding: 1.2em 1.5em 0.8em 1.7em;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+}
+
+#get-involved-prefooter .button:hover, #get-involved-prefooter .button:active,
+#get-involved-prefooter .button:before, #get-involved-prefooter .button:after { background: #13B5EA; }
+
+#page-footer.get-involved-footer { background-position: center top; }
+#page-footer.get-involved-footer .site-width { width: 71%; }
 
 #bike-features {
   padding: 9em 2%;
@@ -3447,7 +3527,7 @@ A.mm-close {
 }
 
 .single-post .alignnone {
-  margin: 75px 0 50px;
+  margin: 75px auto 50px;
 }
 
 .wp-caption { max-width: 100% !important; }
@@ -3737,15 +3817,15 @@ A.mm-close {
 @media only screen and (max-width: 1100px) {
   #header .site-width > .main-menu UL LI { padding: 0 1.5em; }
 
+  #home-pricing .background-text { font-size: 14.5vw; }
+
   .pricing-grid { width: 30.5%; margin-right: 3.8% }
 
-  #about-who-wins LABEL { font-size: 2vw; }
+  .tabs LABEL { font-size: 2vw; }
 }
 
 @media only screen and (max-width: 1050px) {
   #header .site-width > .main-menu UL LI { padding: 0 1em; }
-
-  #home-pricing .background-text { font-size: 15.2vw; }
 
   .pricing-grid { width: 30.7%; margin-right: 3.5%; }
 
@@ -3772,6 +3852,16 @@ A.mm-close {
 }
 
 @media only screen and (max-width: 1000px) {
+  #header.sticky { background: transparent; box-shadow: none; }
+  #header.sticky .site-width #logo { display: none; }
+  #header.sticky .site-width .mobile #menu-toggle {
+    background: #13B5EA;
+    border-radius: 50%;
+    padding: 10px;
+    transition: none;
+    right: calc(2% - 10px);
+  }
+
   #header #menu-toggle-top,
   #header .top-bar,
   #header .site-width > .main-menu,
@@ -3814,9 +3904,9 @@ A.mm-close {
     width: 96%;
   }
 
-  #about-who-wins .tab-content .image { position: static; width: 100%; padding-top: 45%; }
-  #about-who-wins .tab-content .text { margin-left: 0; width: 100%; padding: 50px 0; min-height: 0; }
-  #about-who-wins .tab-content .text .point:last-of-type { margin-bottom: 0; }
+  .tabs .tab-content .image { position: static; width: 100%; padding-top: 45%; }
+  .tabs .tab-content .text { margin-left: 0; width: 100%; padding: 50px 0; min-height: 0; }
+  .tabs .tab-content .text .point:last-of-type { margin-bottom: 0; }
 }
 
 @media only screen and (max-width: 900px) {
@@ -3928,6 +4018,9 @@ A.mm-close {
   #about-postheader .left,
   #about-postheader .right { float: none; width: 100%; }
   #about-postheader .right { margin-top: 2em; }
+  
+  #get-involved-content .left { width: 70%; }
+  #get-involved-content .right { width: 25%; margin-right: 0; }
 
   .contact .form #name,
   .contact .form #company,
@@ -4025,6 +4118,8 @@ A.mm-close {
   .footer-third.copyright,
   .footer-third.location,
   .footer-third.apps { width: 32%; }
+
+  #modal-wrap { display: none; }
   
   .modal-left { width: 100%; }
   .modal-right {
@@ -4043,7 +4138,7 @@ A.mm-close {
 
   #page-header .text {
     width: 100%;
-    padding: 4em 0;
+    padding: 4em 0 !important;
   }
 
   #page-header .text H1 { font-size: 12.9vw; }
@@ -4062,6 +4157,9 @@ A.mm-close {
   }
 
   #page-footer .site-width { width: 80% !important; }
+
+  #get-involved-content .left,
+  #get-involved-content .right { float: none; width: 100%; }
   
   #donate-amount { padding: 1em 0; }
   #donate-amount FORM {
@@ -4237,6 +4335,16 @@ A.mm-close {
 
   .footer-third.apps IMG { margin: 0 0.5em; }
 
+  #pricing-content .pricing { font-size: 3.5vw; }
+
+  #how-it-works-prefooter { font-size: 3vw; }
+
+  #get-involved-prefooter H2 { font-size: 8.4vw; }
+
+  .contact .sidebar { font-size: 4vw; }
+
+  #page-footer.donate-footer .site-width { font-size: 9vw; }
+
   .single-post-gallery.gallery-columns-2 A,
   .single-post-gallery.gallery-columns-3 A,
   .single-post-gallery.gallery-columns-4 A,
@@ -4247,14 +4355,6 @@ A.mm-close {
   .single-post-gallery.gallery-columns-9 A {
     width: 100%;
   }
-
-  #pricing-content .pricing { font-size: 3.5vw; }
-
-  #how-it-works-prefooter { font-size: 3vw; }
-
-  .contact .sidebar { font-size: 4vw; }
-
-  #page-footer.donate-footer .site-width { font-size: 9vw; }
 
   .first-post H1 { font-size: 9vw; }
   
