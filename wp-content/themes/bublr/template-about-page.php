@@ -22,6 +22,17 @@ $header = get_posts(array('name' => 'about-header', 'post_type' => 'page'));
   </div>
 </div>
 
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery("dd").hide();
+
+    jQuery("dl dt").click(function(){
+      jQuery(this).next('dd').slideToggle();
+      return false;
+    });
+  });
+</script>
+
 <div id="about-content">
   <div class="site-width">
     <?php
