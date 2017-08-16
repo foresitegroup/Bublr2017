@@ -83,7 +83,8 @@ get_header();
               <select name="help" id="help">
                 <option value="">How can we help?</option>
                 <option value="General Inquiry">General Inquiry</option>
-                <option value="Sponsorships">Sponsorships</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Sponsorship">Sponsorship</option>
                 <option value="Employment Opportunities">Employment Opportunities</option>
               </select>
             </div>
