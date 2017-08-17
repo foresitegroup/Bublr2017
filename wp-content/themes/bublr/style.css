@@ -3175,6 +3175,152 @@ A.mm-close {
   line-height: 1em;
 }
 
+.sponsorship {
+  padding: 6em 0;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.8em;
+}
+
+.sponsorship H1 {
+  margin: 0 0 0.2em;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sponsorship .links {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1em;
+  margin-top: 5em;
+}
+
+.sponsorship A { text-decoration: underline; }
+.sponsorship A:hover, .sponsorship A:active { color: #FFFFFF; }
+
+.sponsorship .button:link, .sponsorship .button:visited {
+  border-color: #13B5EA;
+  color: #FFFFFF;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  padding: 0.9em 1.2em 0.6em 1.4em;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-right: 4em;
+}
+
+.sponsorship .button:hover, .sponsorship .button:active,
+.sponsorship .button:before, .sponsorship .button:after {
+  background: #13B5EA;
+}
+
+#sponsor-logos {
+  padding: 5em 0;
+  background: #FFFFFF;
+}
+
+#sponsor-logos .site-width { position: relative; }
+
+#sponsor-logos .sponsors .sponsor {
+  width: 20%;
+  min-height: 115px !important;
+  line-height: 1em;
+  outline: 0;
+  position: relative;
+}
+
+#sponsor-logos .sponsors .sponsor IMG {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 69%;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+}
+
+#sponsor-logos A:link,
+#sponsor-logos A:visited {
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+  text-decoration: underline;
+  color: #2D3590;
+  position: absolute;
+  bottom: -6em;
+  right: 0;
+}
+
+#sponsor-logos A:hover,
+#sponsor-logos A:active {
+  color: #13B5EA;
+}
+
+#sponsorship-blue-section {
+  background: #13B5EA;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.7em;
+  position: relative;
+}
+
+#sponsorship-blue-section .image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sponsorship-blue-section .text {
+  padding: 5em 0;
+  width: 49%;
+}
+
+#sponsorship-white-section {
+  padding: 5em 0;
+  background: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.5em;
+}
+
+#sponsorship-white-section UL {
+  margin: 0 0 0 0.7em;
+  padding: 0 0 0 0.7em;
+}
+
+#sponsorship-white-section UL LI {
+  padding: 0.4em 0;
+}
+
+.sponsorship-prefooter {
+  padding: 5em 0;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.8em;
+}
+
+.sponsorship-prefooter A { text-decoration: underline; }
+.sponsorship-prefooter A:hover, .sponsorship-prefooter A:active { color: #FFFFFF; }
+
+#page-footer.sponsorship-footer .site-width { width: 71%; }
+
+
+
 
 /* BLOG */
 .first-post {
@@ -3925,6 +4071,8 @@ A.mm-close {
 
   #about-postheader .left { width: 60%; }
   #about-postheader .right { width: 33%; }
+
+  .sponsorship H1 { font-size: 9.4vw; }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -3978,7 +4126,9 @@ A.mm-close {
 
   #how-it-works-content .site-width { width: 96%; }
 
-  .contact, #faq-content, .media,
+  #sponsorship-blue-section .text { padding: 3em 0; }
+
+  .contact, #faq-content, .media, .sponsorship,
   .first-post .site-width { margin-top: 105px; }
 
   .single-post P, .single-post BLOCKQUOTE,
@@ -4022,6 +4172,11 @@ A.mm-close {
   #page-footer .site-width { width: 70%; }
 
   .contact .sidebar { width: 30%; }
+
+  .sponsorship .button:link, .sponsorship .button:visited { margin-right: 4%; }
+
+  #sponsorship-blue-section .image { position: static; width: 100%; height: 450px; }
+  #sponsorship-blue-section .text { width: 100%; }
 
   .index-cats .search-form { width: 33%; }
 
@@ -4122,6 +4277,10 @@ A.mm-close {
   #donate-content A.donate-link DIV { font-size: 8vw; }
   #donate-content A.donate-link:link SPAN,
   #donate-content A.donate-link:visited SPAN { font-size: 1.8vw; }
+
+  .sponsorship .button:link, .sponsorship .button:visited { margin-right: 0; }
+  .sponsorship .button:after { display: block; content:"\a"; white-space: pre; }
+  .sponsorship .links SPAN { display: block; margin-top: 3em; }
   
   .index-post:link,
   .index-post:visited {
