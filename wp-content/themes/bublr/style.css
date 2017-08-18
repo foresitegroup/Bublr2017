@@ -3319,6 +3319,88 @@ A.mm-close {
 
 #page-footer.sponsorship-footer .site-width { width: 71%; }
 
+.current-sponsors {
+  padding: 6em 0;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.8em;
+}
+
+.current-sponsors H1 {
+  margin: 0 0 0.2em;
+  font-weight: 900;
+  font-size: 77px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.current-sponsors .links {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1em;
+  margin-top: 5em;
+}
+
+.current-sponsors A { text-decoration: underline; }
+.current-sponsors A:hover, .current-sponsors A:active { color: #FFFFFF; }
+
+#sponsor-list {
+  padding: 3em 0 5em;
+  background: #FFFFFF;
+}
+
+#sponsor-list H2 {
+  margin: 2.5em 0 1em;
+  color: #13B5EA;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#sponsor-list .sponsor {
+  float: left;
+  width: 21.56%;
+  margin: 0 4.36% 2em 0;
+  border: 1px solid #ECECEC;
+  background: #F3F3F3;
+  position: relative;
+}
+
+#sponsor-list .sponsor:before {
+  display: block;
+  content: "";
+  padding-top: 76.93%;
+}
+
+#sponsor-list .cf .sponsor:nth-of-type(4n) { margin-right: 0; }
+
+#sponsor-list .sponsor IMG {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 75%;
+  height: auto;
+  max-height: 60%;
+  width: auto;
+}
+
+#sponsor-list .sponsor DIV {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.3em;
+}
+
 
 
 
@@ -4031,6 +4113,10 @@ A.mm-close {
   #bike-safety .safety-point { width: 43.74%; }
   #bike-safety .safety-point:nth-of-type(even) { margin-left: 12.52%; }
 
+  #sponsor-list .sponsor { margin-right: 4.2%; }
+
+  #sponsor-list .sponsor DIV { font-size: 2.2vw; }
+
   .blog-single .first-post .site-width { width: 96%; }
 
   #page-footer .site-width.blog-footer { width: 75%; }
@@ -4128,7 +4214,7 @@ A.mm-close {
 
   #sponsorship-blue-section .text { padding: 3em 0; }
 
-  .contact, #faq-content, .media, .sponsorship,
+  .contact, #faq-content, .media, .sponsorship, .current-sponsors,
   .first-post .site-width { margin-top: 105px; }
 
   .single-post P, .single-post BLOCKQUOTE,
@@ -4281,6 +4367,12 @@ A.mm-close {
   .sponsorship .button:link, .sponsorship .button:visited { margin-right: 0; }
   .sponsorship .button:after { display: block; content:"\a"; white-space: pre; }
   .sponsorship .links SPAN { display: block; margin-top: 3em; }
+
+  #sponsor-list .sponsor { width: 31%; margin-right: 2.9%; }
+  #sponsor-list .cf .sponsor:nth-of-type(4n) { margin-right: 2.9%; }
+  #sponsor-list .cf .sponsor:nth-of-type(3n) { margin-right: 0; }
+
+  #sponsor-list .sponsor DIV { font-size: 3vw; }
   
   .index-post:link,
   .index-post:visited {
@@ -4399,6 +4491,8 @@ A.mm-close {
     margin: 5em 0;
   }
   #donate-amount FORM > DIV { margin-top: 1em; }
+
+  .current-sponsors H1 { font-size: 75px; }
   
   .index-cats { text-align: center; }
   .index-cats .search-form {
@@ -4520,6 +4614,14 @@ A.mm-close {
   #donate-content A.donate-link DIV { font-size: 82px; }
   #donate-content A.donate-link:link SPAN,
   #donate-content A.donate-link:visited SPAN { font-size: 14px; }
+
+  .current-sponsors H1 { font-size: 12vw; }
+
+  #sponsor-list .sponsor { width: 48%; margin-right: 3%; }
+  #sponsor-list .cf .sponsor:nth-of-type(3n) { margin-right: 3%; }
+  #sponsor-list .cf .sponsor:nth-of-type(2n) { margin-right: 0; }
+
+  #sponsor-list .sponsor DIV { font-size: 4.5vw; }
   
   .first-post { font-size: 16px; }
   .first-post .site-width { padding-right: 0; }
@@ -4589,6 +4691,11 @@ A.mm-close {
   .contact .sidebar { font-size: 4vw; }
 
   #page-footer.donate-footer .site-width { font-size: 9vw; }
+
+  #sponsor-list .sponsor { width: 100%; margin-right: 0; }
+  #sponsor-list .cf .sponsor:nth-of-type(3n) { margin-right: 0; }
+
+  #sponsor-list .sponsor DIV { font-size: 10vw; }
 
   .single-post-gallery.gallery-columns-2 A,
   .single-post-gallery.gallery-columns-3 A,
