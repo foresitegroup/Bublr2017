@@ -36,7 +36,8 @@ global $BlogInc;
 
   <script type="text/javascript">
     jQuery(document).ready(function() {
-      jQuery("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
+      jQuery("a[href^='http']").not("[href*='" + window.location.host + "']").prop('target','new');
+      jQuery("a[href$='.pdf']").prop('target', 'new');
 
       jQuery("#header").waypoint(function(direction) {
         jQuery("#header").toggleClass("sticky", direction == "down");
