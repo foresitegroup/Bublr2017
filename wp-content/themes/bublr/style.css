@@ -2058,6 +2058,16 @@ A.mm-close {
   padding: 6.5em 0 6em;
 }
 
+#pricing-hacm H3 {
+  margin: 0;
+  color: #13B5EA;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+#pricing-hacm P { margin: 0 0 2em; }
+#pricing-hacm P:last-of-type { margin: 0; }
+
 #pricing-hacm A:link,
 #pricing-hacm A:visited {
   color: #FFFFFF;
@@ -3401,6 +3411,203 @@ A.mm-close {
   line-height: 1.3em;
 }
 
+.sponsorship-opp {
+  padding: 6em 0;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.8em;
+}
+
+.sponsorship-opp H1 {
+  margin: 0 0 0.2em;
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sponsorship-opp .opp-list {
+  margin-top: 3em;
+  display: inline-block;
+  border: 5px solid #13B5EA;
+  border-radius: 1.5em/50%;
+  padding: 0.9em 1em 0.5em 1.3em;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+}
+
+.sponsorship-opp .opp-list:after {
+  font-family: "Bublr";
+  content: "\e916";
+  transform: rotate(90deg);
+  display: inline-block;
+  font-size: 60%;
+  margin-left: 1em;
+}
+
+#presenting-sponsor {
+  background: #13B5EA;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2em;
+  position: relative;
+}
+
+#presenting-sponsor .image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#presenting-sponsor .text {
+  padding: 5em 0;
+  width: 49%;
+}
+
+#presenting-sponsor .text H2 {
+  margin: 0 0 0.5em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#presenting-sponsor .text H3 {
+  margin: 0 0 2em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1em;
+}
+
+#sponsor-packages {
+  padding: 1em 0;
+  background: #EBEBEB;
+}
+
+.sponsor-package {
+  margin: 100px 0;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.10);
+  background: #FFFFFF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4em;
+  position: relative;
+}
+
+.sponsor-package:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sponsor-package .image {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 4em 3em;
+  text-align: center;
+}
+
+.sponsor-package .image.full {
+  position: absolute;
+  height: 100%;
+  width: calc(50% - 4.5em);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sponsor-package .image IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+.sponsor-package .text {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 4em 4em 4em 0;
+  float: right;
+}
+
+.sponsor-package .text H2 {
+  margin: 0 0 0.3em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+}
+
+.sponsor-package .text H3 {
+  margin: 0 0 0.1em;
+  color: #2D3590;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1em;
+}
+
+.sponsor-package .text H4 {
+  margin: 0;
+  color: #2D3590;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1em;
+}
+
+.sponsor-package .text HR {
+  margin: 2em 0;
+  border-top: 7px solid #717375;
+  width: 75px;
+}
+
+.sponsor-package .text H5 {
+  margin: 3em 0 0.5em;
+  color: #13B5EA;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 1.4em;
+  letter-spacing: 0.2em;
+}
+
+.sponsor-package .text UL {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sponsor-package .text UL LI {
+  padding: 1.2em 0 1em;
+  font-size: 14px;
+  line-height: 1.2em;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.sponsor-contact {
+  padding: 5em 0;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.8em;
+}
+
+.sponsor-contact A { text-decoration: underline; }
+.sponsor-contact A:hover, .sponsor-contact A:active { color: #FFFFFF; }
+
+#page-footer.sponsor-contact .site-width { width: 71%; }
+
 
 
 
@@ -4214,7 +4421,7 @@ A.mm-close {
 
   #sponsorship-blue-section .text { padding: 3em 0; }
 
-  .contact, #faq-content, .media, .sponsorship, .current-sponsors,
+  .contact, #faq-content, .media, .sponsorship, .current-sponsors, .sponsorship-opp,
   .first-post .site-width { margin-top: 105px; }
 
   .single-post P, .single-post BLOCKQUOTE,
@@ -4373,6 +4580,13 @@ A.mm-close {
   #sponsor-list .cf .sponsor:nth-of-type(3n) { margin-right: 0; }
 
   #sponsor-list .sponsor DIV { font-size: 3vw; }
+
+  #presenting-sponsor .image { position: static; width: 100%; height: 500px; }
+  #presenting-sponsor .text { width: 100%; }
+
+  .sponsor-package .image { float: none; width: 100%; padding: 4em 1em 0 1em; }
+  .sponsor-package .image.full { position: static; height: 400px; width: 100%; }
+  .sponsor-package .text { float: none; width: 100%; padding: 4em 7%; }
   
   .index-post:link,
   .index-post:visited {
@@ -4622,6 +4836,8 @@ A.mm-close {
   #sponsor-list .cf .sponsor:nth-of-type(2n) { margin-right: 0; }
 
   #sponsor-list .sponsor DIV { font-size: 4.5vw; }
+
+  .sponsorship-opp H1 { font-size: 12.5vw; }
   
   .first-post { font-size: 16px; }
   .first-post .site-width { padding-right: 0; }
