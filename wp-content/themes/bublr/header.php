@@ -14,7 +14,7 @@ global $BlogInc;
     ?>
   </title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width">
   <link rel="profile" href="http://gmpg.org/xfn/11">
 
   <?php if (isset($BlogInc)) echo $BlogInc; ?>
@@ -60,30 +60,30 @@ global $BlogInc;
 
 <div id="header">
   <input type="checkbox" id="show-menu-top" role="button">
-  <label for="show-menu-top" id="menu-toggle-top"></label>
+  <label for="show-menu-top" id="menu-toggle-top"><span>MENU</span></label>
   <div class="top-bar">
     <?wp_nav_menu( array( 'theme_location' => 'top-menu', 'container_class' => 'top-menu' ) ); ?>
 
     <div class="site-width">
       <div class="social">
-        <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter"></a>'; ?>
-        <?php if (get_theme_mod('bublr_facebook') != "") echo '<a href="' . get_theme_mod('bublr_facebook') . '" class="facebook"></a>'; ?>
-        <?php if (get_theme_mod('bublr_instagram') != "") echo '<a href="' . get_theme_mod('bublr_instagram') . '" class="instagram"></a>'; ?>
-        <?php if (get_theme_mod('bublr_youtube') != "") echo '<a href="' . get_theme_mod('bublr_youtube') . '" class="youtube"></a>'; ?>
-        <?php if (get_theme_mod('bublr_linkedin') != "") echo '<a href="' . get_theme_mod('bublr_linkedin') . '" class="linkedin"></a>'; ?>
+        <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter" aria-label="Twitter"></a>'; ?>
+        <?php if (get_theme_mod('bublr_facebook') != "") echo '<a href="' . get_theme_mod('bublr_facebook') . '" class="facebook" aria-label="Facebook"></a>'; ?>
+        <?php if (get_theme_mod('bublr_instagram') != "") echo '<a href="' . get_theme_mod('bublr_instagram') . '" class="instagram" aria-label="Instagram"></a>'; ?>
+        <?php if (get_theme_mod('bublr_youtube') != "") echo '<a href="' . get_theme_mod('bublr_youtube') . '" class="youtube" aria-label="YouTube"></a>'; ?>
+        <?php if (get_theme_mod('bublr_linkedin') != "") echo '<a href="' . get_theme_mod('bublr_linkedin') . '" class="linkedin" aria-label="LinkedIn"></a>'; ?>
       </div>
     </div>
   </div>
 
   <div class="site-width">
-    <a href="<?php echo home_url(); ?>" id="logo"></a>
+    <a href="<?php echo home_url(); ?>" id="logo" aria-label="Bublr Bikes"></a>
 
     <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main-menu' ) ); ?>
 
     <a href="https://bublrbikes.bcycle.com/login" class="button">Account Login</a>
 
     <div class="mobile">
-      <a href="#mobile-menu" id="menu-toggle"></a>
+      <a href="#mobile-menu" id="menu-toggle" aria-label="Menu"></a>
     </div>
   </div>
 </div>

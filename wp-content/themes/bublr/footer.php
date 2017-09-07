@@ -6,11 +6,11 @@
       <?php echo do_shortcode('[insert page="footer" display="content"]'); ?>
 
       <div class="social">
-        <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter"></a>'; ?>
-        <?php if (get_theme_mod('bublr_facebook') != "") echo '<a href="' . get_theme_mod('bublr_facebook') . '" class="facebook"></a>'; ?>
-        <?php if (get_theme_mod('bublr_instagram') != "") echo '<a href="' . get_theme_mod('bublr_instagram') . '" class="instagram"></a>'; ?>
-        <?php if (get_theme_mod('bublr_youtube') != "") echo '<a href="' . get_theme_mod('bublr_youtube') . '" class="youtube"></a>'; ?>
-        <?php if (get_theme_mod('bublr_linkedin') != "") echo '<a href="' . get_theme_mod('bublr_linkedin') . '" class="linkedin"></a>'; ?>
+        <?php if (get_theme_mod('bublr_twitter') != "") echo '<a href="' . get_theme_mod('bublr_twitter') . '" class="twitter" aria-label="Twitter"></a>'; ?>
+        <?php if (get_theme_mod('bublr_facebook') != "") echo '<a href="' . get_theme_mod('bublr_facebook') . '" class="facebook" aria-label="Facebook"></a>'; ?>
+        <?php if (get_theme_mod('bublr_instagram') != "") echo '<a href="' . get_theme_mod('bublr_instagram') . '" class="instagram" aria-label="Instagram"></a>'; ?>
+        <?php if (get_theme_mod('bublr_youtube') != "") echo '<a href="' . get_theme_mod('bublr_youtube') . '" class="youtube" aria-label="YouTube"></a>'; ?>
+        <?php if (get_theme_mod('bublr_linkedin') != "") echo '<a href="' . get_theme_mod('bublr_linkedin') . '" class="linkedin" aria-label="LinkedIn"></a>'; ?>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
       NEWS, OFFERS &amp; UPDATES
       <form>
         <div>
-          <input type="email" name="email" placeholder="EMAIL ADDRESS">
+          <input type="email" name="email" placeholder="EMAIL ADDRESS" aria-label="Email Address">
           <input type="submit" name="subscribe" value="SUBSCRIBE">
         </div>
       </form>
@@ -47,7 +47,7 @@
 
 </div> <!-- /#shove For mobile menu -->
 <nav id="mobile-menu">
-  <a href="#shove" class="mm-close"><i class="fg fg-close"></i></a>
+  <a href="#shove" class="mm-close" aria-label="Close"><i class="fg fg-close"></i></a>
   <ul>
     <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
 

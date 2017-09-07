@@ -147,7 +147,7 @@ function FG_post_gallery($output, $attr) {
   foreach ($attachments as $id => $attachment) {
     $img = wp_get_attachment_image_src($id, 'full');
 
-    $output .= "<a href=\"" . $img[0] . "\" rel=\"sb" . $columns . "\" style=\"background-image: url(" . $img[0] . ");\"></a>\n";
+    $output .= "<a href=\"" . $img[0] . "\" data-sb=\"sb" . $columns . "\" style=\"background-image: url(" . $img[0] . ");\" aria-label=\"" . basename($img[0]) . "\"></a>\n";
   }
 
   $output .= "</div>\n";
@@ -218,4 +218,13 @@ add_filter('previous_post_link', 'post_link_attributes_prev');
 add_filter('next_post_link', 'post_link_attributes_next');
 function post_link_attributes_prev($output) { return str_replace('<a href=', '<a class="prev" href=', $output); }
 function post_link_attributes_next($output) { return str_replace('<a href=', '<a class="next" href=', $output); }
+
+// ...and remove unneeded H2 and role
+function sanitize_pagination($content) {
+  $content = preg_replace('#<h2.*?>(.*?)<\/h2>#si', '', $content);
+  $content = str_replace('role="navigation"', '', $content);
+
+  return $content;
+}
+add_action('navigation_markup_template', 'sanitize_pagination');
 ?>

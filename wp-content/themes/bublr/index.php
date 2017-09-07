@@ -49,7 +49,7 @@ if (!is_single()) :
       <div class="select">
         <?php
         $select = wp_dropdown_categories(array('show_option_all' => 'All Categories', 'orderby' => 'name', 'echo' => 0));
-        $replace = "<select$1 onchange='return this.form.submit()'>";
+        $replace = "<select$1 onchange='return this.form.submit()' aria-label='Select Category'>";
         $select  = preg_replace('#<select([^>]*)>#', $replace, $select);
         echo $select;
         ?>
@@ -57,8 +57,8 @@ if (!is_single()) :
     </form>
 
     <form action="<?php echo esc_url(home_url('/')); ?>"  method="GET" class="search-form">
-      <input type="text" class="search-field" placeholder="SEARCH BLOG" value="<?php echo get_search_query(); ?>" name="s">
-      <button type="submit" class="search-submit"><i class="fg fg-search"></i></button>
+      <input type="text" class="search-field" placeholder="SEARCH BLOG" value="<?php echo get_search_query(); ?>" name="s" aria-label="Search Blog">
+      <button type="submit" class="search-submit" aria-label="Submit"><i class="fg fg-search"></i></button>
     </form>
   </div>
 

@@ -5,6 +5,7 @@ jQuery(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    accessibility: false,
     arrows: false,
     dots: false,
     responsive: [

@@ -67,20 +67,20 @@ get_header();
           <div>
             <h5>Contact us for any reason, we look forward to hearing from you!</h5>
 
-            <input type="text" name="<?php echo md5("name" . $ip . $salt . $timestamp); ?>" id="name" placeholder="Name">
+            <input type="text" name="<?php echo md5("name" . $ip . $salt . $timestamp); ?>" id="name" placeholder="Name" aria-label="Name">
 
-            <input type="email" name="<?php echo md5("email" . $ip . $salt . $timestamp); ?>" id="email" placeholder="Email Address">
+            <input type="email" name="<?php echo md5("email" . $ip . $salt . $timestamp); ?>" id="email" placeholder="Email Address" aria-label="Email Address">
 
             <div style="clear: both;"></div>
             
-            <input type="text" name="<?php echo md5("company" . $ip . $salt . $timestamp); ?>" id="company" placeholder="Company">
+            <input type="text" name="<?php echo md5("company" . $ip . $salt . $timestamp); ?>" id="company" placeholder="Company" aria-label="Company">
             
-            <input type="tel" name="<?php echo md5("phone" . $ip . $salt . $timestamp); ?>" id="phone" placeholder="Phone">
+            <input type="tel" name="<?php echo md5("phone" . $ip . $salt . $timestamp); ?>" id="phone" placeholder="Phone" aria-label="Phone">
 
             <div style="clear: both;"></div>
 
             <div class="select">
-              <select name="help" id="help">
+              <select name="help" id="help" aria-label="How can we help?">
                 <option value="">How can we help?</option>
                 <option value="General Inquiry">General Inquiry</option>
                 <option value="Volunteer">Volunteer</option>
@@ -89,12 +89,12 @@ get_header();
               </select>
             </div>
 
-            <textarea name="<?php echo md5("message" . $ip . $salt . $timestamp); ?>" id="message" placeholder="Message"></textarea>
+            <textarea name="<?php echo md5("message" . $ip . $salt . $timestamp); ?>" id="message" placeholder="Message" aria-label="Message"></textarea>
 
             <input type="checkbox" name="mailinglist" id="mailinglist" value="yes">
             <label for="mailinglist">Subscribe to Bublr news &amp; updates.</label>
 
-            <input type="text" name="confirmationCAP" style="display: none;">
+            <input type="text" name="confirmationCAP" style="display: none;" aria-label="Leave this field blank">
 
             <input type="hidden" name="ip" value="<?php echo $ip; ?>">
             <input type="hidden" name="timestamp" value="<?php echo $timestamp; ?>">

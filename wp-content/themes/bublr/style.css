@@ -139,7 +139,6 @@ SELECT {
   line-height: 1em;
   -webkit-appearance: none; /* I prefer my styles, Steve Jobs */
   -moz-appearance: none;
-  appearance: none;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -358,6 +357,8 @@ A.arrow:after {
   padding: 0;
   transition: all 1s cubic-bezier(0, 1, 0.5, 1);
 }
+
+#menu-toggle-top SPAN, #menu-toggle SPAN { display: none; }
 
 #menu-toggle-top:hover,
 #menu-toggle:hover {
@@ -3100,7 +3101,6 @@ A.mm-close {
   line-height: 1em;
   -webkit-appearance: none; /* I prefer my styles, Steve Jobs */
   -moz-appearance: none;
-  appearance: none;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
