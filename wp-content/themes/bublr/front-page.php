@@ -15,27 +15,25 @@
 get_header();
 
 while ( have_posts() ) : the_post();
-  // Randomly select banner image from the page's gallry
-  $images = get_children( array(
-    'posts_per_page' => 1,
-    'orderby'        => 'rand',
-    'order' => 'ASC',
-    'post_type'      => 'attachment',
-    'post_mime_type' => 'image',
-    'post_parent'    => get_the_ID(),
-    'post_status' => 'inherit'
-  ));
+  // Randomly select banner image from the page's gallery
+  // $images = get_children( array(
+  //   'posts_per_page' => 1,
+  //   'orderby'        => 'rand',
+  //   'order' => 'ASC',
+  //   'post_type'      => 'attachment',
+  //   'post_mime_type' => 'image',
+  //   'post_parent'    => get_the_ID(),
+  //   'post_status' => 'inherit'
+  // ));
 
-  foreach ( $images as $attachment_id => $attachment ) {
-    $home_banner = wp_get_attachment_url( $attachment_id);
-  }
+  // foreach ( $images as $attachment_id => $attachment ) {
+  //   $home_banner = wp_get_attachment_url( $attachment_id);
+  // }
   ?>
   
   <div class="home-wrapper">
-    <div id="home-banner" style="background-image: url(<?php echo $home_banner; ?>);">
-      <div class="site-width">
-        <?php the_content(); ?>
-      </div>
+    <div id="home-slider">
+      <?php the_content(); ?>
     </div>
 
     <script type="text/javascript">
