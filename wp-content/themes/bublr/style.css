@@ -759,6 +759,8 @@ A.mm-close {
   background: #2D3590;
 }
 
+#home-slider .cycle-slideshow .cycle-pager SPAN.cycle-pager-active { background: #13B5EA; }
+
 #home-pricing {
   background: url(images/pricing-background.png) center bottom no-repeat;
   background-size: 100% auto;
@@ -4542,7 +4544,7 @@ A.mm-close {
   #home-banner:before { padding-bottom: 60%; }
   #home-banner .site-width { top: calc(50% + 55px); font-size: 70px; }
 
-  #home-slider .foresite-slide { padding-top: 105px; }
+  #home-slider .cycle-slideshow { padding-top: 105px; }
   #home-slider .site-width { top: calc(50% + 55px); font-size: 70px; }
 
   .pricing-grid { width: 32%; margin: 0 1.5% 0.25em 0; }
