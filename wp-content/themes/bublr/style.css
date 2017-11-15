@@ -4582,7 +4582,8 @@ A.mm-close {
 
   #sponsorship-blue-section .text { padding: 3em 0; }
 
-  .contact, #faq-content, .media, .sponsorship, .current-sponsors, .sponsorship-opp,
+  .contact, #faq-content, .media, #special-pricing-content,
+  .sponsorship, .current-sponsors, .sponsorship-opp,
   .first-post .site-width { margin-top: 105px; }
 
   .single-post P, .single-post BLOCKQUOTE,
@@ -4928,6 +4929,12 @@ A.mm-close {
 @media only screen and (max-width: 600px) {
   .mm-menu.mm-offcanvas { width: 50%; }
   html.mm-right.mm-opening .mm-menu~.mm-slideout { transform: translate3d(-50%,0,0); }
+
+  #logo { height: 105px; width: 140px; }
+
+  .contact, #faq-content, .media, #special-pricing-content,
+  .sponsorship, .current-sponsors, .sponsorship-opp,
+  .first-post .site-width { margin-top: 0; }
 
   #home-banner:before { padding-bottom: 75%; }
   #home-banner .button:link, #home-banner .button:visited { font-size: 2.65vw; }
