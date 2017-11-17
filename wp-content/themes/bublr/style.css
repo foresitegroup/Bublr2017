@@ -4932,9 +4932,11 @@ A.mm-close {
 
   #logo { height: 105px; width: 140px; }
 
-  .contact, #faq-content, .media, #special-pricing-content,
+  #faq-content, .media, #special-pricing-content,
   .sponsorship, .current-sponsors, .sponsorship-opp,
   .first-post .site-width { margin-top: 0; }
+
+  .contact { margin-top: 1.5em; }
 
   #home-banner:before { padding-bottom: 75%; }
   #home-banner .button:link, #home-banner .button:visited { font-size: 2.65vw; }
