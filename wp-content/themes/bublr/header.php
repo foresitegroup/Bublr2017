@@ -88,7 +88,7 @@ var google_remarketing_only = true;
   <input type="checkbox" id="show-menu-top" role="button">
   <label for="show-menu-top" id="menu-toggle-top"><span>MENU</span></label>
   <div class="top-bar">
-    <?wp_nav_menu( array( 'theme_location' => 'top-menu', 'container_class' => 'top-menu' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'top-menu', 'container_class' => 'top-menu' ) ); ?>
 
     <div class="site-width">
       <div class="social">
@@ -104,7 +104,7 @@ var google_remarketing_only = true;
   <div class="site-width">
     <a href="<?php echo home_url(); ?>" id="logo" aria-label="Bublr Bikes"></a>
 
-    <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main-menu' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main-menu' ) ); ?>
 
     <a href="https://bublrbikes.bcycle.com/login" class="button">Account Login</a>
 

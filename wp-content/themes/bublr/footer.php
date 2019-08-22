@@ -15,7 +15,7 @@
     </div>
 
     <div class="footer-third menu">
-      <?wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer-menu' ) ); ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer-menu' ) ); ?>
     </div>
 
     <div class="footer-third subscribe">
@@ -49,12 +49,12 @@
 <nav id="mobile-menu">
   <a href="#shove" class="mm-close" aria-label="Close"><i class="fg fg-close"></i></a>
   <ul>
-    <?wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
 
     <li class="login"><a href="https://bublrbikes.bcycle.com/login" class="button">Account Login</a></li>
     <li class="divider"><hr></li>
 
-    <?wp_nav_menu( array( 'theme_location' => 'top-menu', 'container' => 'wtf', 'items_wrap' => '%3$s' ) ); ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'top-menu', 'container' => 'wtf', 'items_wrap' => '%3$s' ) ); ?>
   </ul>
 </nav>
 
