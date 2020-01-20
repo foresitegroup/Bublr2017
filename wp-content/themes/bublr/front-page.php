@@ -76,7 +76,16 @@ while ( have_posts() ) : the_post();
       // });
     </script>
 
-    <!-- <div id="modal-wrap">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/inc/slick/slick.css">
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/slick/slick.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/slick/slick.init.sponsor-slider.js"></script>
+    <div id="sponsor-logos">
+      <div class="site-width">
+        <?php echo do_shortcode('[insert page="sponsor-logos" display="content"]'); ?>
+      </div>
+    </div>
+
+    <div id="modal-wrap">
       <div class="modal" id="annual-pass">
         <div class="modal-menu">
           <div class="site-width">
@@ -112,7 +121,7 @@ while ( have_posts() ) : the_post();
 
         <?php echo do_shortcode('[insert page="pay-as-you-go" display="content"]'); ?>
       </div>
-    </div> -->
+    </div>
 
     <div id="home-pricing">
       <div class="background-text">GREATER<br>MILWAUKEE'S<br>NONPROFIT<br>BIKE<br>SHARE</div>

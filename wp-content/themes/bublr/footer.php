@@ -20,12 +20,17 @@
 
     <div class="footer-third subscribe">
       NEWS, OFFERS &amp; UPDATES
-      <form>
-        <div>
-          <input type="email" name="email" placeholder="EMAIL ADDRESS" aria-label="Email Address">
-          <input type="submit" name="subscribe" value="SUBSCRIBE">
+      <!-- Begin MailChimp Signup Form -->
+      <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+      <form action="https://bublrbikes.us12.list-manage.com/subscribe/post?u=c5fb25d62c9d76781b0783dc0&amp;id=b2a8e7f9d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" aria-label="Email Address" placeholder="EMAIL ADDRESS" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c5fb25d62c9d76781b0783dc0_fc84ad0b32" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
         </div>
       </form>
+      <!--End mc_embed_signup-->
     </div>
 
     <hr>
@@ -59,6 +64,21 @@
 </nav>
 
 <?php wp_footer(); ?>
+
+<script type="text/javascript">
+_linkedin_partner_id = "832131";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=832131&fmt=gif" />
+</noscript>
 
 </body>
 </html>
